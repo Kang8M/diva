@@ -20,7 +20,7 @@
 	<meta property="og:image:alt" content="Sunshine Group" />
 
 	<link rel="shortcut icon" href="http://localhost/diva/wp-content/uploads/2020/08/ioc.ico">
-	
+
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/css/jquery.bxslider.css">
