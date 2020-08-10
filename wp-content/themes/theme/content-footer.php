@@ -1,139 +1,119 @@
 <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/footer.css?v=2">
-<div class="home-row footer">
-
-  <div class="wrap-row">
-    <div class="box-2" >
-      <div class="box-footer">
-        <form>
-          <label class="footer-title">Đăng ký nhận tin</label>
-          <input type="text" name="username" placeholder="Họ và tên" />
-          <input type="text" name="phone" placeholder="Số điện thoại" />
-          <input type="text" name="email" placeholder="Email" />
-          <a class="footer-submit">GỬI THÔNG TIN</a>
-        </form>
-      </div>
-
-      <div class="box-footer">
-        <div class="footer-title">
-          Liên hệ
+<footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <div class="footer__contain container">
+        <div class="footer__content">
+            <div class="footer__item-brand my--20 w--27">
+                <img src="http://localhost/diva/wp-content/uploads/2020/08/Logo-Diva-Luxury-Academy-nen.png" alt="logo-footer">
+            </div>
+            <div class="row-divide">
+                <div class="footer__item col-divide-4 col-divide-md-12">
+                    <div class="footer__item-info">
+                        <div class="title--item p--btm--15">
+                            CÔNG TY CP TẬP ĐOÀN DIVA GROUP
+                        </div>
+                        <p class="p--btm--15">
+                            <b>Mã số doanh nghiệp:</b> 5801 358 357
+                        </p>
+                        <p class="p--btm--15">
+                            <b>Trụ sở chính:</b> Số 250, Hai Bà Trưng, P.6, Tp. Đà Lạt, Lâm Đồng
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__item footer__style footer__info_center col-divide-4 col-divide-md-12 text--right">
+                    <p class="p--btm--15 margin--width-max">
+                        <span class="border--50 rotate--90"><i class="fa fa-phone"></i></span>
+                        <span>Hotline: <a class="text--light" href="tel:1900 6689">
+                        1900 6689          </a>
+                        </span>
+                    </p>
+                    <p class="p--btm--15 margin--width-max">
+                        <span class="border--50"><i class="fa fa-envelope border--50"></i></span>
+                        <span>Email: info@vienthammydiva.vn</span>
+                    </p>
+                    <form class="p--btm--15" name="registerForm" method="GET" id="registerFormFooter">
+                        <input class="footer__item-email text--right" placeholder="info@vienthammydiva.vn" name="footerEmail" id="footerEmail">
+                        <input type="hidden" name="sdt" value="">
+                        <input type="hidden" name="ghiChu" value="">
+                    </form>
+                    <div class="btn__seen">
+                        <p class="btn px--0 text--upcase text--light" id="registerBtnFooter" name="registerBtn">Đăng ký ngay &nbsp; &nbsp; →
+                        </p>
+                    </div>
+                    <script>
+                        var submitFooter = jQuery("#registerBtnFooter");
+                        submitFooter.click(function()
+                        {
+                            var data = jQuery('#registerFormFooter').serialize();
+                            jQuery.ajax({
+                                type : 'GET',
+                                url : 'https://script.google.com/macros/s/AKfycbzXjFsVEr61LhfwLeV-XEsAtkVZ9PNIQ5AWVY0xj8h4Wqn2IA/exec',
+                                dataType:'json',
+                                crossDomain : true,
+                                data : data,
+                                header: "Access-Control-Allow-Origin: *",
+                                success : function(data)
+                                {
+                                    if(data == 'false')
+                                    {
+                                        alert('Đăng ký không thành công, Error');
+                                    }else{
+                                        alert('Cảm ơn bạn ! Chúng tôi sẽ sớm liên hệ bạn');
+                                        location.reload(true);
+                                    }
+                                }
+                            });
+                            return false;
+                        });
+                    </script>
+                </div>
+                <div class="footer__item col-divide-4 col-divide-md-12">
+                    <p class="my-20 footer__follow text--right">
+                        <button class="btn text--upcase text--light px--25 main--background" id="btnFooterRegister">
+                            Đặt lịch hẹn ngay
+                        </button>
+                    </p>
+                    <p class="p--btm--15 footer__follow text--right">
+                        Theo dõi chúng tôi tại
+                    </p>
+                    <p class="p--btm--15 footer__follow text--right">
+                        <a class="footer__social icon-social mx--5 d--inline-block" href="https://www.facebook.com/vanhoadivagroup/">
+                            <i class="fa fa-facebook-official color-light"></i>
+                        </a>
+                        <a class="footer__social icon-social mx--5 d--inline-block" href="https://www.youtube.com/channel/UCZ16DClNxvkE1En6zTzSLpw?sub_confirmation=1">
+                            <i class="fa fa-youtube color-light"></i>
+                        </a>
+                        <a class="footer__social icon-social mx--5 d--inline-block" href="">
+                            <i class="fa fa-instagram color-light"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
-        <a href="http://sunshinegroup.vn/" target="_blank">TẬP ĐOÀN SUNSHINE</a>
-        <a href="" target="_blank">
-          <img src="<?php echo bloginfo('template_url')?>/assets/images/home/location-icon.png">
-          Ciputra - Nam Thăng Long - Hà Nội
-        </a>
-        <a>
-          <img src="<?php echo bloginfo('template_url')?>/assets/images/home/footer-mail-icon.png">
-          goldenriver@sunshinemail.vn
-        </a>
-        <a href="tel:18006258">
-          <img src="<?php echo bloginfo('template_url')?>/assets/images/home/footer-phone-icon.png">
-          1800 6258</a>
-      </div>
-
-      <div class="box-footer">
-        <div class="footer-title">
-          Lưu ý
+        <div class="footer__sub d--flex">
+            <p>
+                <a class="text--primary" href="https://vienthammydiva.vn/chinh-sach-bao-mat-thong-tin/">Chính sách bảo mật thông tin</a>
+                <a class="text--primary" href="https://vienthammydiva.vn/dieu-khoan-chinh-sach-su-dung/">Điều khoản chính sách sử dụng</a>
+            </p>
+            <p class="text--center-mb">Copyright © 2014 - 2020 Công Ty CP Tập Đoàn DIVA Group. All Right Reserved. </p>
         </div>
-
-        <p>* Hình ảnh chỉ mang tính chất minh họa. Căn hộ/Biệt thự và các trang thiết bị kèm theo Căn hộ/Biệt thự sẽ được bàn giao theo đúng quy định tại hợp đồng mua bán ký kết.</p>
-        <img src="<?php echo bloginfo('template_url')?>/assets/images/home/footer-phone-icon.png">
-        <img src="<?php echo bloginfo('template_url')?>/assets/images/home/footer-mail-icon.png">
-        <img src="<?php echo bloginfo('template_url')?>/assets/images/home/footer-fb-icon.png">
-      </div>
-
     </div>
-  </div>
-
-  <div class="box-3">
-    <div class="wrap-row">
-      <?php wp_nav_menu(array('container'=>false,'menu' => 'primary-2','menu_class'=>'nav'));?>
-      <p class="fc">© <a href="#">Sunshine Golden River</a> 2018, All Rights Reserved.</p>
-    </div>
-  </div>
-
-</div>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footer .footer-submit').click(function() {
-        var username = $('.footer').find('input[name="username"]').val();
-        var phone = $('.footer').find('input[name="phone"]').val();
-        var email = $('.footer').find('input[name="email"]').val();
-        if (username != '' && phone != '' && email != '') {
-          $.ajax({
-                    type: "POST",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    url: 'https://api.sunshinegroup.vn/api/v1/internal/SubmitContact',
-                    data: JSON.stringify({
-                        projectCd: "17",
-                        contactName: username,
-                        email: email,
-                        phone: phone,
-                        note: 'Khách đăng ký nhận thông tin dự án Sunshine Golden River.'
-                    }),
-                    success: function(data) {
-                        if (data && data.status == 'success') {
-                          alert('Đăng ký nhận thông tin thành công!');
-                          $('.footer').find('input[name="username"]').val('');
-                          $('.footer').find('input[name="phone"]').val('');
-                          $('.footer').find('input[name="email"]').val('');
-                        }
-                        else {
-                            
-                        }
-                    },
-                    error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        
-                     },
-                    dataType: 'json'
-                });
+</footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
         }
-      });
-
-    $('.lien-he form').submit(function(e) {
-        e.preventDefault();
-        var username = $('.lien-he').find('input[name="username"]').val();
-        var phone = $('.lien-he').find('input[name="phone"]').val();
-        var email = $('.lien-he').find('input[name="email"]').val();
-        
-        var note = $('.lien-he').find('textarea[name="note"]').val();
-        if (username != '' && phone != '' && email != '') {
-          $.ajax({
-                    type: "POST",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    url: 'https://api.sunshinegroup.vn/api/v1/internal/SubmitContact',
-                    data: JSON.stringify({
-                        projectCd: "17",
-                        contactName: username,
-                        email: email,
-                        phone: phone,
-                        note: note
-                    }),
-                    success: function(data) {
-                        if (data && data.status == 'success') {
-                          alert('Đăng ký đặt mua thành công!');
-                          $('.lien-he').find('input[name="username"]').val('');
-                          $('.lien-he').find('input[name="phone"]').val('');
-                          $('.lien-he').find('input[name="email"]').val('');
-                        }
-                        else {
-                            
-                        }
-                    },
-                    error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        
-                     },
-                    dataType: 'json'
-                });
-        }
-      });
-
-  });
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>

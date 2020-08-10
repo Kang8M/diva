@@ -22,11 +22,13 @@
 	<link rel="shortcut icon" href="<?php echo bloginfo('template_url')?>/assets/images/trang-chu/logo.ico">
 	
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/bootstrap/css/bootstrap.min.css">
+<!--	<link rel="stylesheet" href="--><?php //echo bloginfo('template_url')?><!--/assets/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/bootstrap/css/bootstrap-custom.css">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/css/jquery.bxslider.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/layout.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/style-page.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/single.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/global.css">
 	
 	<script src="<?php echo bloginfo('template_url')?>/assets/js/jquery.min.js"></script>
 	<script src="<?php echo bloginfo('template_url')?>/assets/bootstrap/js/bootstrap.min.js"></script>
