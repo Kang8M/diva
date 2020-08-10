@@ -1,0 +1,37 @@
+@font-face {
+    font-family: Bebas;
+    src: url(../fonts/UTMBebas_0.woff);
+}
+@font-face {
+    font-family: Oxy;
+    src: url(../fonts/OxyVietnam.woff);
+}
+@font-face {
+    font-family: OxyBold;
+    src: url(../fonts/OxyVietnamBold.woff);
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	color: #2d2a28;
+}
+a:hover {
+	text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1600px) and (min-width: 1367px) {
+    
+}
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+
+}
+@media only screen and (max-width: 425px)  { 
+
+}
+
+@media only screen and (max-width: 320px)  {
+    
+}

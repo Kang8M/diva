@@ -1,0 +1,702 @@
+@font-face {
+    font-family: YenTu;
+    src: url(../fonts/Yen-Tu/UTM_Yen_Tu.woff);
+}
+@font-face {
+    font-family: Perurama;
+    src: url(../fonts/Penurama/UTM-Penumbra_1.woff);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-Regular1.woff);
+}
+html {
+	margin-top: 0px !important;
+}
+body {
+	max-width: 1920px;
+	margin: 0px auto;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+.page-row {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.wrap-row {
+	margin: auto;
+	max-width: 75%;
+}
+.row-1 {
+	border-top: 2px solid #e2ca5a;
+}
+.row-1 .header-bg {
+	width: 84%;
+}
+.row-1 .bg-2 {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 80%;
+}
+.row-1 .contact-header {
+	    position: absolute;
+    top: 20%;
+    left: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+    width: 14px;
+    height: auto;
+}
+.row-1 .contact-header a {
+	    float: left;
+    width: 100%;
+    position: relative;
+    padding-top: 16px;
+    height: 80px;
+    color: #5a5957;
+    margin-bottom: 20px;
+}
+.row-1 .contact-header a:hover {
+	color: #fff;
+	trasition: 0.5s;
+}
+.row-1 .contact-header a img {
+	    display: block;
+    float: left;
+    position: absolute;
+    top: 0px;
+    left: 2px;
+}
+.row-1 .contact-header a span {
+	    transform: rotate(90deg);
+    display: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.row-1 .logo {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    margin-left: -70px;
+}
+.row-1 .scroll {
+	position: absolute;
+	font-family: Perurama;
+	color: #2c2b29;
+	bottom: 0px;
+	right: 80px;
+	font-weight: bold;
+}
+.row-1 .scroll:before {
+	    position: absolute;
+    content: ' ';
+    width: 2px;
+    height: 160px;
+    top: -170px;
+    left: 20px;
+    background: #e0e0e0;
+}
+.row-1 .header-text {
+	    position: absolute;
+    bottom: 190px;
+    left: 175px;
+}
+.row-1 .header-text .text-1 {
+	    color: #fff;
+    font-family: YenTu;
+    font-size: 80px;
+    position: relative;
+    font-weight: normal;
+    margin-bottom: 45px;
+}
+.row-1 .header-text .text-1 span {
+	    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    font-family: Perurama;
+    font-size: 16px;
+    letter-spacing: 10px;
+    background: linear-gradient(to right, #cc7d4d, #c1a041, #f5ecbc, #e6dba1, #b79d4f, #ff9b00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.row-1 .header-text .text-2 {
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+.row-2 {
+	padding: 30px 0px 0px;
+}
+.row-2 .content-header {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.row-2 .content-header span {
+	font-family: YenTu;
+	font-size: 60px;
+	background: linear-gradient(to right, #482a18, #c1a041, #c5b976, #dcd090, #88702b, #7b4c03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.row-2 .content-title {
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-family: Perurama;
+	font-size: 32px;
+	padding: 0px 26%;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	color: #2d2a28;
+}
+.row-2 .content-text {
+	float: left;
+	width: 100%;
+	font-size: 18px;
+	font-family: Gilroy;
+	color: #7a7e83;
+	line-height: 26px;
+	text-align: center;
+}
+.row-2 .content-text p {
+	margin-bottom: 30px;
+}
+.row-2 .content-text span {
+	font-weight: bold;
+}
+.row-2 .content-text strong {
+	line-height: 26px;
+}
+.row-2 .slider {
+	float: left;
+	width: 100%;
+}
+.row-2 .slider .item {
+	position: relative;
+	max-height: 635px;
+	overflow: hidden;
+}
+.row-2 .slider .item img {
+	width: 100%;
+}
+.row-2 .slider .item .item-text {
+	position: absolute;
+	width: 100%;
+	padding: 15px 0px;
+	left: 0px;
+	bottom: 0px;
+	border-top: 1px solid #bab7b7;
+	color:  #fff;
+	font-family: Perurama;
+	padding-left: 30px;
+	font-size: 24px;
+}
+.row-3 {
+	    padding-top: 90px;
+    background: url(../images/gioi-thieu/line-icon.jpg) no-repeat top center;
+}
+.row-3 .text-box {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.row-3 .slider {
+	float: left;
+	width: 100%;
+}
+.row-3 .text-box .content-header {
+	    font-family: YenTu;
+    font-size: 60px;
+    background: linear-gradient(to right, #482a18, #c1a041, #c5b976, #dcd090, #88702b, #7b4c03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+.row-3 .text-box .content-text {
+	    float: left;
+    width: 100%;
+    font-size: 18px;
+    font-family: Gilroy;
+    color: #7a7e83;
+    line-height: 26px;
+    text-align: center;
+}
+.row-3 .page-slider-1 .item {
+	overflow: hidden;
+	max-height: 635px;
+}
+.row-3 .page-slider-1 .item img {
+	width: 100%;
+}
+.row-3 .bx-wrapper .bx-pager {
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #efefef;
+    bottom: 20px;
+    text-align: left;
+}
+.row-3 .bx-default-pager .bx-pager-item a.active, .row-3 .bx-default-pager .bx-pager-item a:hover {
+	background: none;
+    width: 15px;
+    border: 3px solid #e7d263;
+    height: 15px;
+    border-radius: 50%;
+}
+.row-3 .bx-default-pager .bx-pager-item a {
+    background: #b5b4b4;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.bx-wrapper .bx-pager-item {
+	vertical-align: middle !important;
+}
+
+.row-4 {
+	float: left;
+	position: relative;
+	width: 100%;
+	    padding-top: 110px;
+    background: url(../images/gioi-thieu/line-icon.jpg) no-repeat top center;
+}
+.row-4:before {
+	content: ' ';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../images/gioi-thieu/sunshine-text-bg.jpg) no-repeat right center;
+}
+.row-4 .slider {
+	float: left;
+	width: 55%;
+}
+.row-4 .page-slider-2 .item img {
+	width: 100%;
+}
+.row-4 .text-box {
+	position: absolute;
+	background: #fff;
+	bottom: 0px;
+	left: 38%;
+	padding: 40px 60px;
+	box-sizing: border-box;
+}
+.row-4 .text-box .content-header {
+	font-family: YenTu;
+    font-size: 60px;
+    background: linear-gradient(to right, #482a18, #c1a041, #c5b976, #dcd090, #88702b, #7b4c03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    float: left;
+}
+.row-4 .text-box .content-des {
+	float: left;
+    width: 100%;
+    font-size: 18px;
+    font-family: Gilroy;
+    color: #7a7e83;
+}
+.row-4 .text-box .read-more {
+	float: left;
+	font-weight: bold;
+	font-family: Gilroy;
+	color: #333;
+	font-size: 18px;
+	border-bottom: 3px solid #333;
+	padding-right: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.row-4 .bx-wrapper {
+	margin-bottom: 0px;
+}
+.row-4 .bx-pager-2 {
+	position: absolute;
+    right: 0%;
+    bottom: 230px;
+    width: 50%;
+    height: 137px;
+    vertical-align: middle;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.row-4 .bx-pager-2 a {
+	float: right;
+	width: 18%;
+	overflow: hidden;
+	position: relative;
+	height: 100px;
+	/*transition: 0.5s;
+	display: inline-block;
+    vertical-align: middle;*/
+}
+.row-4 .bx-pager-2 a.active {
+	transform: scale(1.2, 1.4);
+	transition: 0.5s;
+	/*width: 25%;
+	height: 100px;*/
+	border: 1px solid #e2b83c;
+	z-index: 999;
+}
+.row-4 .bx-pager-2 a:before {
+	position: absolute;
+	content: ' ';
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: #333;
+	opacity: 0.3;
+	transition: 0.5s;
+}
+.row-4 .bx-pager-2 a.active:before {
+	opacity: 0;
+}
+.row-4 .bx-pager-2 a img {
+	width: 100%;
+}
+
+.row-5 {
+	float: left;
+	position: relative;
+	width: 100%;
+	    padding-top: 110px;
+    background: url(../images/gioi-thieu/line-icon.jpg) no-repeat top center;
+}
+.row-5:before {
+	content: ' ';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../images/gioi-thieu/sunshine-text-bg-2.jpg) no-repeat left center;
+}
+.row-5 .slider {
+	float: right;
+	width: 55%;
+}
+.row-5 .page-slider-3 .item img {
+	width: 100%;
+}
+.row-5 .text-box {
+	position: absolute;
+	background: #fff;
+	bottom: 0px;
+	left: 26%;
+	padding: 40px 60px;
+	box-sizing: border-box;
+}
+.row-5 .text-box .content-header {
+	font-family: YenTu;
+    font-size: 60px;
+    background: linear-gradient(to right, #482a18, #c1a041, #c5b976, #dcd090, #88702b, #7b4c03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    float: left;
+}
+.row-5 .text-box .content-des {
+	float: left;
+    width: 100%;
+    font-size: 18px;
+    font-family: Gilroy;
+    color: #7a7e83;
+    text-align: right;
+}
+.row-5 .text-box .read-more {
+	float: right;
+	font-weight: bold;
+	font-family: Gilroy;
+	color: #333;
+	font-size: 18px;
+	border-bottom: 3px solid #333;
+	padding-right: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.row-5 .bx-wrapper {
+	margin-bottom: 0px;
+}
+.row-5 .bx-pager-3 {
+	position: absolute;
+    left: 0%;
+    bottom: 230px;
+    width: 50%;
+    height: 137px;
+    vertical-align: middle;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.row-5 .bx-pager-3 a {
+	float: left;
+	width: 18%;
+	overflow: hidden;
+	position: relative;
+	height: 100px;
+	/*transition: 0.5s;
+	display: inline-block;
+    vertical-align: middle;*/
+}
+.row-5 .bx-pager-3 a.active {
+	transform: scale(1.2, 1.4);
+	transition: 0.5s;
+	/*width: 25%;
+	height: 100px;*/
+	border: 1px solid #e2b83c;
+	z-index: 999;
+}
+.row-5 .bx-pager-3 a:before {
+	position: absolute;
+	content: ' ';
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: #333;
+	opacity: 0.3;
+	transition: 0.5s;
+}
+.row-5 .bx-pager-3 a.active:before {
+	opacity: 0;
+}
+.row-5 .bx-pager-3 a img {
+	width: 100%;
+}
+
+
+.row-6 {
+	float: left;
+	position: relative;
+	width: 100%;
+	    padding-top: 110px;
+    background: url(../images/gioi-thieu/line-icon.jpg) no-repeat top center;
+}
+.row-6:before {
+	content: ' ';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../images/gioi-thieu/sunshine-text-bg.jpg) no-repeat left center;
+}
+.row-6 .slider {
+	float: left;
+	width: 55%;
+}
+.row-6 .page-slider-4 .item img {
+	width: 100%;
+}
+.row-6 .text-box {
+	position: absolute;
+	background: #fff;
+	bottom: 0px;
+	left: 26%;
+	padding: 40px 60px;
+	box-sizing: border-box;
+}
+.row-6 .text-box .content-header {
+	font-family: YenTu;
+    font-size: 60px;
+    background: linear-gradient(to right, #482a18, #c1a041, #c5b976, #dcd090, #88702b, #7b4c03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    float: left;
+}
+.row-6 .text-box .content-des {
+	float: left;
+    width: 100%;
+    font-size: 18px;
+    font-family: Gilroy;
+    color: #7a7e83;
+    text-align: right;
+}
+.row-6 .text-box .read-more {
+	float: right;
+	font-weight: bold;
+	font-family: Gilroy;
+	color: #333;
+	font-size: 18px;
+	border-bottom: 3px solid #333;
+	padding-right: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.row-6 .bx-wrapper {
+	margin-bottom: 0px;
+}
+
+
+.footer {
+	float: left;
+	width: 100%;
+	background: #232220;
+	color: #fff;
+	padding: 40px 0px;
+	box-sizing: border-box;
+}
+.footer .box {
+	float: left;
+	width: 50%;
+	padding: 0px 120px;
+	border-right: 1px solid #383734;
+	box-sizing: border-box;
+}
+.footer .box:last-child {
+	border: none;
+}
+.footer .box .logo-footer {
+	float: left;
+	width: 100%;
+	margin-bottom: 25px;
+}
+.footer .box .footer-title {
+	float: left;
+	width: 100%;
+	font-weight: bold;
+	color: #fff;
+	font-size: 22px;
+	margin-bottom: 25px;
+	font-family: sans-serif;
+}
+.footer .box .contact-info {
+	float: left;
+	width: 100%;
+	font-family: sans-serif;
+}
+.footer .box .contact-info .contact-text {
+	float: left;
+	width: 100%;
+	color: #6d6c69;
+	margin-bottom: 15px;
+}
+.footer .box .contact-info .contact-text.text-2 {
+	width: 50%;
+}
+
+.footer .box .contact-info .contact-text span {
+	font-weight: bold;
+	color: #fff;
+}
+.footer .box .contact-info .contact-text a {
+	color: #6d6c69;
+	text-decoration: none;
+}
+.footer .box .contact-info .contact-text a:hover {
+	color: #fff;
+	transition: 0.5s;
+}
+.footer .box .form-dk-tin {
+	float: left;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.footer .box .form-dk-tin label {
+	font-family: sans-serif;
+	color: #Fff;
+	font-size: 16px;
+	margin-bottom: 20px;
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.footer .box .form-dk-tin input {
+	width: 100%;
+	line-height: 36px;
+	padding-left: 15px;
+	border: 1px solid #dfb558;
+	color: #000;
+}
+.footer .box .form-dk-tin .form-group {
+	width: 70%;
+	position: relative;
+}
+.footer .box .form-dk-tin .submit-btn {
+	position: absolute;
+	background: url(../images/bg-submit.png) no-repeat;
+	padding: 10px 15px;
+	top: 0px;
+	right: 0px;
+}
+.footer .box  .contact-info-2 {
+	float: left;
+	width: 100%;
+}
+.footer .box  .contact-info-2 span {
+	font-weight: bold;
+	font-family: sans-serif;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+.footer .box  .footer-last-text {
+	display: inline-block;
+	margin-top: 15px;
+	font-family: sans-serif;
+	color: #6d6c69;
+}
+.footer .box  .footer-last-text span {
+	font-weight: bold;
+	color: #e7dc7f;
+}
+
+.bx-wrapper {
+	border: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1367px) {
+	.row-2 .slider .item {
+		max-height: 470px;
+	}
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1025px) {
+	.row-2 .slider .item {
+		max-height: 446px;
+	}
+	.row-1 .header-text {
+		bottom: 108px;
+    	left: 135px;
+	}
+	.row-1 .header-text .text-1 {
+		font-size: 80px;
+	}
+	.row-1 .header-text .text-1 span {
+		font-size: 18px;
+		left: 58px;
+	}
+	.row-1 .header-text .text-2 {
+		font-size: 14px;
+	}
+	.row-2 .content-title {
+		font-size: 22px;
+    	padding: 0px 17%;
+	}
+	.row-2 .content-text {
+		font-size: 15px;
+	}
+	.row-2 .slider .item .item-text {
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+	
+}
