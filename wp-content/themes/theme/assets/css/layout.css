@@ -1,15 +1,4 @@
-@font-face {
-    font-family: Bebas;
-    src: url(../fonts/UTMBebas_0.woff);
-}
-@font-face {
-    font-family: Oxy;
-    src: url(../fonts/OxyVietnam.woff);
-}
-@font-face {
-    font-family: OxyBold;
-    src: url(../fonts/OxyVietnamBold.woff);
-}
+
 html {
   scroll-behavior: smooth;
 }

@@ -19,15 +19,16 @@
 	<meta property="og:image:height" content="1080" />
 	<meta property="og:image:alt" content="Sunshine Group" />
 
-	<link rel="shortcut icon" href="<?php echo bloginfo('template_url')?>/assets/images/trang-chu/logo.ico">
+	<link rel="shortcut icon" href="http://localhost/diva/wp-content/uploads/2020/08/ioc.ico">
 	
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/css/jquery.bxslider.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/layout.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/style-page.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/single.css">
-	
+<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo bloginfo('template_url')?><!--/assets/css/layout.css">-->
+<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo bloginfo('template_url')?><!--/assets/css/style.css">-->
+<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo bloginfo('template_url')?><!--/assets/css/single.css">-->
+	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/global.css">
+
 	<script src="<?php echo bloginfo('template_url')?>/assets/js/jquery.min.js"></script>
 	<script src="<?php echo bloginfo('template_url')?>/assets/bootstrap/js/bootstrap.min.js"></script>
   	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -48,43 +49,170 @@
 
 </head>
 <body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5P3KRS"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-
 
 <header>
-	<div class="header-row">
-		<div class="wrap-row">
-			<div class="header-box">
-				<div class="header-logo">
-					<a href="<?php echo get_bloginfo( 'wpurl' );?>">
-					  <img src="<?php echo bloginfo('template_url')?>/assets/images/trang-chu/logo.png" alt="trang chủ" />
-					</a>
+	<div class="header__contain container">
+		<div class="header__item">
+			<div class="header__brand">
+				<a href="#" class="d--block">
+					<img src="http://localhost/diva/wp-content/uploads/2020/08/Visa-logo_CMYK-01.png" alt="Diva-logo">
+				</a>
+			</div>
+			<div class="header__navbar dt--none">
+				<div class="menu-main-menu-container">
+					<ul id="menu-main-menu" class="menu">
+						<li id="menu-item-1362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1362">
+							<a>Giới thiệu</a>
+							<ul class="sub-menu">
+								<li id="menu-item-9238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9238"><a href="https://vienthammydiva.vn/ve-chung-toi/">Về DIVA Group</a></li>
+								<li id="menu-item-757" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-757"><a href="https://vienthammydiva.vn/cong-nghe-tham-my/">Về Công Nghệ</a></li>
+								<li id="menu-item-756" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-756"><a href="https://vienthammydiva.vn/co-so-vat-chat-cua-diva-spa/">Về Cơ Sở Vật Chất</a></li>
+								<li id="menu-item-754" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-754"><a href="https://vienthammydiva.vn/quy-trinh-tham-my-tai-diva-spa/">Về Quy Trình Điều Trị</a></li>
+								<li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-755"><a href="https://vienthammydiva.vn/doi-ngu-bac-si-cua-diva-spa/">Về Đội Ngũ Bác Sĩ</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-2466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2466">
+							<a>PHUN THÊU THẨM MỸ</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1369" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1369"><a href="https://vienthammydiva.vn/phun-may/">Phun Mày</a></li>
+								<li id="menu-item-2465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2465"><a href="https://vienthammydiva.vn/phun-moi/">Phun Môi</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-791">
+							<a href="https://vienthammydiva.vn/dich-vu-cua-vien-tham-my-diva/">ĐIỀU TRỊ DA</a>
+							<ul class="sub-menu">
+								<li id="menu-item-2469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2469"><a href="https://vienthammydiva.vn/dieu-tri-mun-chuyen-sau/">Điều Trị Mụn</a></li>
+								<li id="menu-item-2467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2467"><a href="https://vienthammydiva.vn/dieu-tri-nam/">Điều Trị Nám – Tàn Nhang</a></li>
+								<li id="menu-item-2499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2499"><a href="https://vienthammydiva.vn/dieu-tri-seo/">Điều Trị Sẹo Rỗ</a></li>
+								<li id="menu-item-7695" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7695"><a href="https://vienthammydiva.vn/xoa-not-ruoi-an-toan/">Xóa Nốt Ruồi</a></li>
+								<li id="menu-item-7756" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7756"><a href="https://vienthammydiva.vn/xoa-xam/">Xóa Xăm</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-2470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2470">
+							<a>CHĂM SÓC DA</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1228" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1228"><a href="https://vienthammydiva.vn/cham-soc-da-chuyen-sau/">Chăm Sóc Da Chuyên Sâu</a></li>
+								<li id="menu-item-2471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2471"><a href="https://vienthammydiva.vn/vi-kim-tao-bien/">Vi Kim Tảo Biển</a></li>
+								<li id="menu-item-7952" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7952"><a href="https://vienthammydiva.vn/ban-sang-ha/">Bắn Sáng HA</a></li>
+								<li id="menu-item-2473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2473"><a href="https://vienthammydiva.vn/tam-trang-phi-thuyen/">Tắm Trắng Phi Thuyền</a></li>
+								<li id="menu-item-2474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2474"><a href="https://vienthammydiva.vn/triet-long">Triệt Lông Super Nano Light</a></li>
+								<li id="menu-item-2500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2500"><a href="https://vienthammydiva.vn/phu-bong-nano/">Phủ Bóng NaNo</a></li>
+								<li id="menu-item-1372" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1372"><a href="https://vienthammydiva.vn/giam-beo/">Giảm Mỡ Lipo Theramax Plus</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-3714" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3714"><a href="https://vienthammydiva.vn/tin-tuc/">Tin tức</a></li>
+						<li id="menu-item-7766" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7766">
+							<a href="https://vienthammydiva.vn/kien-thuc/">Kiến Thức</a>
+							<ul class="sub-menu">
+								<li id="menu-item-12156" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12156"><a href="https://vienthammydiva.vn/phun-mi/">Phun mí</a></li>
+								<li id="menu-item-16733" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16733"><a href="https://vienthammydiva.vn/kien-thuc/dam-moi/">Dặm Môi</a></li>
+								<li id="menu-item-7768" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7768"><a href="https://vienthammydiva.vn/plasma/">Công nghệ Plasma</a></li>
+								<li id="menu-item-7767" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7767"><a href="https://vienthammydiva.vn/kien-thuc/cham-soc-da-diva-luxury/">Chăm Sóc Da</a></li>
+								<li id="menu-item-7771" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7771"><a href="https://vienthammydiva.vn/kien-thuc/dieu-tri-da-diva-luxury/">Điều Trị Da</a></li>
+								<li id="menu-item-8063" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8063"><a href="https://vienthammydiva.vn/kien-thuc/dia-chi-lam-dep/">Địa Chỉ Làm Đẹp</a></li>
+								<li id="menu-item-8216" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8216"><a href="https://vienthammydiva.vn/kien-thuc/cong-nghe-lam-dep/">Công Nghệ Làm Đẹp</a></li>
+								<li id="menu-item-9313" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9313"><a href="https://vienthammydiva.vn/kien-thuc/corona/">Corona</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-12704" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12704">
+							<a>Đào tạo &amp; Tuyển dụng</a>
+							<ul class="sub-menu">
+								<li id="menu-item-12412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12412"><a href="https://vienthammydiva.vn/dao-tao/">Đào Tạo</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-2459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2459"><a href="https://vienthammydiva.vn/chuoi-co-so/">LIÊN HỆ</a></li>
+					</ul>
 				</div>
-
-				<div class="header-menu menu-1">
-					<?php wp_nav_menu(array('container'=>false,'menu' => 'primary-1','menu_class'=>'nav'));?>
-				</div>
-
-				<div class="header-mobile">
-					<a href="tel:18006258"><i class="glyphicon glyphicon-earphone"></i> 18006258</a>
-				</div>
-
+			</div>
+		</div>
+		<div class="header__item">
+			<div class="header__btn">
+				<a class="header__btn-call main--background border--50 d--block text--center" href="tel:1900 6689" target="_blank">
+					<i class="fa fa-phone  text--light"></i>
+				</a>
+			</div>
+			<div class="header__btn">
+				<button class="header__btn-register btn main--background text--upcase text--light" id="btnHeaderRegister">
+					Đăng ký ngay
+				</button>
+			</div>
+			<div class="header__btn">
+				<button class="header__btn-menu btn" id="btnHeaderMenu">
+					<i class="fa fa-info-circle dp--none" aria-hidden="true"></i>
+					<i class="fa fa-search d--none dp--block" aria-hidden="true"></i>
+				</button>
+			</div>
+			<div class="header__btn">
+				<button class="header__btn-menu btn navbar-toggle" id="navbar-toggle">
+					<i class="fa fa-bars d--none dp--block" aria-hidden="true"></i>
+				</button>
+				<nav class="d--none">
+					<div class="menu-main-menu-container">
+						<ul id="webexp24h_menu" class="nav webexp24h_menu navbar-nav">
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1362" id="va_item0">
+								<a class="dropdown-toggle">Giới thiệu <span class="extra_menu"><i class="fa fa-caret-down "> </i></span> </a>
+								<ul class="sub-menu dropdown-menu">
+									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9238" id="va_item1"><a href="https://vienthammydiva.vn/ve-chung-toi/">Về DIVA Group</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-757" id="va_item2"><a href="https://vienthammydiva.vn/cong-nghe-tham-my/">Về Công Nghệ</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-756" id="va_item3"><a href="https://vienthammydiva.vn/co-so-vat-chat-cua-diva-spa/">Về Cơ Sở Vật Chất</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-754" id="va_item4"><a href="https://vienthammydiva.vn/quy-trinh-tham-my-tai-diva-spa/">Về Quy Trình Điều Trị</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-755" id="va_item5"><a href="https://vienthammydiva.vn/doi-ngu-bac-si-cua-diva-spa/">Về Đội Ngũ Bác Sĩ</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2466" id="va_item6">
+								<a class="dropdown-toggle">PHUN THÊU THẨM MỸ <span class="extra_menu"><i class="fa fa-caret-down "> </i></span> </a>
+								<ul class="sub-menu dropdown-menu">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1369" id="va_item7"><a href="https://vienthammydiva.vn/phun-may/">Phun Mày</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2465" id="va_item8"><a href="https://vienthammydiva.vn/phun-moi/">Phun Môi</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-791" id="va_item9">
+								<a href="https://vienthammydiva.vn/dich-vu-cua-vien-tham-my-diva/" class="dropdown-toggle">ĐIỀU TRỊ DA <span class="extra_menu"><i class="fa fa-caret-down "> </i></span> </a>
+								<ul class="sub-menu dropdown-menu">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2469" id="va_item10"><a href="https://vienthammydiva.vn/dieu-tri-mun-chuyen-sau/">Điều Trị Mụn</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2467" id="va_item11"><a href="https://vienthammydiva.vn/dieu-tri-nam/">Điều Trị Nám – Tàn Nhang</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2499" id="va_item12"><a href="https://vienthammydiva.vn/dieu-tri-seo/">Điều Trị Sẹo Rỗ</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7695" id="va_item13"><a href="https://vienthammydiva.vn/xoa-not-ruoi-an-toan/">Xóa Nốt Ruồi</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7756" id="va_item14"><a href="https://vienthammydiva.vn/xoa-xam/">Xóa Xăm</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2470" id="va_item15">
+								<a class="dropdown-toggle">CHĂM SÓC DA <span class="extra_menu"><i class="fa fa-caret-down "> </i></span> </a>
+								<ul class="sub-menu dropdown-menu">
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1228" id="va_item16"><a href="https://vienthammydiva.vn/cham-soc-da-chuyen-sau/">Chăm Sóc Da Chuyên Sâu</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2471" id="va_item17"><a href="https://vienthammydiva.vn/vi-kim-tao-bien/">Vi Kim Tảo Biển</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7952" id="va_item18"><a href="https://vienthammydiva.vn/ban-sang-ha/">Bắn Sáng HA</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2473" id="va_item19"><a href="https://vienthammydiva.vn/tam-trang-phi-thuyen/">Tắm Trắng Phi Thuyền</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2474" id="va_item20"><a href="https://vienthammydiva.vn/triet-long">Triệt Lông Super Nano Light</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2500" id="va_item21"><a href="https://vienthammydiva.vn/phu-bong-nano/">Phủ Bóng NaNo</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1372" id="va_item22"><a href="https://vienthammydiva.vn/giam-beo/">Giảm Mỡ Lipo Theramax Plus</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3714" id="va_item23"><a href="https://vienthammydiva.vn/tin-tuc/">Tin tức</a></li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7766" id="va_item24">
+								<a href="https://vienthammydiva.vn/kien-thuc/" class="dropdown-toggle">Kiến Thức <span class="extra_menu"><i class="fa fa-caret-down "> </i></span> </a>
+								<ul class="sub-menu dropdown-menu">
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12156" id="va_item25"><a href="https://vienthammydiva.vn/phun-mi/">Phun mí</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16733" id="va_item26"><a href="https://vienthammydiva.vn/kien-thuc/dam-moi/">Dặm Môi</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7768" id="va_item27"><a href="https://vienthammydiva.vn/plasma/">Công nghệ Plasma</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7767" id="va_item28"><a href="https://vienthammydiva.vn/kien-thuc/cham-soc-da-diva-luxury/">Chăm Sóc Da</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7771" id="va_item29"><a href="https://vienthammydiva.vn/kien-thuc/dieu-tri-da-diva-luxury/">Điều Trị Da</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8063" id="va_item30"><a href="https://vienthammydiva.vn/kien-thuc/dia-chi-lam-dep/">Địa Chỉ Làm Đẹp</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8216" id="va_item31"><a href="https://vienthammydiva.vn/kien-thuc/cong-nghe-lam-dep/">Công Nghệ Làm Đẹp</a></li>
+									<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9313" id="va_item32"><a href="https://vienthammydiva.vn/kien-thuc/corona/">Corona</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12704" id="va_item33">
+								<a class="dropdown-toggle">Đào tạo &amp; Tuyển dụng <span class="extra_menu"><i class="fa fa-caret-down "> </i></span> </a>
+								<ul class="sub-menu dropdown-menu">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12412" id="va_item34"><a href="https://vienthammydiva.vn/dao-tao/">Đào Tạo</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2459" id="va_item35"><a href="https://vienthammydiva.vn/chuoi-co-so/">LIÊN HỆ</a></li>
+						</ul>
+					</div>
+				</nav>
 			</div>
 		</div>
 	</div>
-
-	<div class="social">
-	    <a href="#" class="item">
-	      <img src="<?php echo bloginfo('template_url')?>/assets/images/home/fb-icon.png">
-	    </a>
-	    <a href="#" class="item popup-regis">
-	      <img src="<?php echo bloginfo('template_url')?>/assets/images/home/mail-icon.png">
-	    </a>
-	</div>
-
-	
-
 </header>
