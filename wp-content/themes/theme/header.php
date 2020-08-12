@@ -30,8 +30,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/global.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/responsive.css">
 
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/assets/css/slick-theme.css">
 
 <!--	<script src="--><?php //echo bloginfo('template_url')?><!--/assets/js/jquery.min.js"></script>-->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
