@@ -1,0 +1,314 @@
+.fa,
+
+.fas {
+
+    color: var(--primary-color);
+
+}
+
+@media screen and (max-width: 1024px) {.post-khoa-hoc .title--section:first-child{margin-top:5px; margin-bottom: 5px;} .post-khoa-hoc{padding-top: 10px;}
+.truonghop h3:first-child{margin: 5px 0;}.why{margin-bottom: 20px;}
+#btn-submit-banner {margin-top: 20px;}.experience__customer h3:first-child{padding-bottom: 10px;}
+.banner .banner__PC-content img {width: 55%;}
+  .text-info-form{display: none;}.truonghop .only-mobile .ping-btnGift{width: 145px;}
+  .recruitment__register .recruitment__register-form .re_name { padding: unset;}
+  .truonghop .only-mobile .btn-why{margin-top: unset;}
+  .form__signin .siz--button{margin-top: 20px;}
+  .post-khoa-hoc{margin-bottom: unset;}
+  #register-banner-form .signin input{margin-bottom: unset;}
+	.hidden-desktop{display: none;}
+	.modal-content-Signup .form__signin-title{border-radius: 20px;}
+	.recruitment__register .recruitment__register-form .re_name{margin-top: 10px;border: 2px solid #c5a167;padding-left: 20px;}
+	.content-modal-pop iframe{height: unset;}
+	.bd--style .col-divide-6.col-divide-lg-12{max-width: unset;}
+	.diva__gift .col-divide-4.col-divide-lg-12{margin-bottom:10px}
+	#about .why__item-contain.p-30{max-height:290px;overflow:hidden}
+	#news .mx-15{margin:0}
+  #media h3:first-child {font-size: 18px;}
+	.ping-btn{left:44.8%}
+	#about .why__item-.contain.p-30{max-height:unset}
+	#openVideoSection{margin:unset}
+	.service img{width:100%;padding:unset}
+	#btn-bannerSignup{display:none}
+	.main_menu.main_menu_hide_on_mobile{display:none}
+	.container{max-width:90%}
+	.col-divide-lg-12{flex:auto;max-width:100%}
+	.col-divide-lg-6{flex:auto;max-width:48%}
+	.col-divide-lg-4{flex:auto;max-width:32%}
+	.col-divide-lg-3{flex:auto;max-width:24%}
+	.title--section,.title--item{text-align:center}
+	figure{max-width:100%!important}
+	.style--inform{margin-bottom:20px}
+	.style--borderfooter{border-bottom:1px solid #eae2e285;padding-bottom:10px}
+	.my-t-20{margin:20px 0;}
+
+}
+
+@media screen and (max-width: 800px) {
+  .truonghop .only-mobile .ping-btnGift {left: 37%;}
+#btn-submit-banner{transform: translateX(5%);margin-top: 10px;}
+  .da-dang-khoa-hoc .only-mobile .why__item-contain p{padding-bottom: unset;margin-bottom: unset;}
+  .da-dang-khoa-hoc .only-mobile .slick-prev.slick-arrow{display: none;}
+  .da-dang-khoa-hoc .only-mobile .why__item-img img{max-height: 170px;
+object-fit: cover;
+overflow: hidden;}
+  .da-dang-khoa-hoc .font-bolder{margin-top: 20px;display: none;}
+  .truonghop .mobile-hidden,.experience__customer .mobile-hidden {display: none;}
+  .experience__customer {background-image: url('../images/behind model.jpg');}
+.truonghop .mobile-hidden {display: none;}
+.truonghop .only-mobile{display: unset}
+.container.fix-header{width: max-content;}
+.hidden-desktop{display: block;}
+.signin input{width: 125%;margin-bottom: unset;}
+.banner__mb .signin input{width: 145%}
+.title--form-sigin{padding-top: 30px;}
+.form__signin .col-divide-6{max-width: 100%;}
+.form__signin-img img{width: 100%;}
+.form__signin {padding-bottom: unset;}
+.banner__PC-content img{ width: 60%;}.positon--ab.border-dao-tao {width: 94%;}
+}
+@media screen and (max-width: 800px) {
+  .service #content-center .customer__item{padding-top: 12%;}
+  .resposive_Modal .form__signin-img{display: none;}
+  .resposive_Modal .title--form-sigin {margin-top: 10px;}
+  #content-center{display: contents;}
+.post-khoa-hoc .only-mobile .why__item{padding:15px 0;}
+  #content-center .intro{padding-left: unset;}
+  #slider-mobile .slick-prev.slick-arrow{display: none !important;}
+  #recruiment.experience__customer {height: max-content;}
+  #discount .signin input {padding-left: 15px;}
+  .experience__customer .only-mobile{display: block;}
+  .service .text--italic.text--light{text-align: center; font-size: 17.5px;}
+  .bg-lips .form__signin .col-divide-6{max-width: 50%;}
+  .bg-lips .form__signin-img img{display: none;}
+  .bg-lips .form__signin-img {background-image: url(../images/sign-in-min.png);background-repeat: no-repeat;background-position: center;background-size: cover;margin-bottom: 50px;
+  padding-bottom: 10px;}
+  .bg-lips .form__signin .col-divide-6 h3,.bg-lips .form__signin .col-divide-6 input, .bg-lips .form__signin .siz--button{font-size: 11px;margin-top:0;}
+  .bg-lips .form__signin .col-divide-6 h3{font-size: 14px;}
+  .bg-lips .form__signin{margin-top: unset;}
+  .bg-lips .form__signin .ping-btnSignUp{height: 27px;width: 75px;top:5%;}
+  .bg-lips .form__signin-title{margin-bottom:50px;padding-bottom: 10px;}
+  .bg-lips .signin input{width: 85%;}
+  .service .intro{padding-left: 20%;}
+  .bg-lips .form__input{padding-bottom: 5px;}
+  /*End form*/
+  .banner .banner__PC .banner__PC_content_right{right: 0;
+bottom: 32%;}
+.banner__PC_content_right .form__signin .siz--button{margin-top: 7px;}
+	#btn-submit-mobile {    transform: translateX(0%);  }
+.da-dang-khoa-hoc .mobile-hidden{display: none;}
+.da-dang-khoa-hoc .only-mobile{display: unset;}
+  }
+@media screen and (max-width: 768px) {.banner__mb .banner__PC_content_right{bottom: 38%;}.truonghop .only-mobile .ping-btnGift {
+    width: 140px;
+}
+.signup-class img{height: 450px;}
+.recruitment__register .recruitment__register-form{top:55%;}
+.service #content-center .customer__item {padding-top: 1px;}
+.banner__mb .signin input{width: 160%;}
+  #content-center{display: unset;}
+  #content-center .intro{padding-left: 25%;}
+
+	.positon--ab.border-dao-tao {width: 94%;left: 24px;}
+	.banner__mb{display:block}
+	.ping-btnTH{left:38.5%}
+
+	#recruiment{height:3000px}
+	.ping-btnGift{left:38%}
+	#modal-Signup .form__signin-img img{display:none}
+	.ping-btn{left:41.8%}
+	body{font-size:18px}
+	.col-divide-md-12{flex:auto;max-width:100%}
+	.col-divide-md-6{flex:auto;max-width:48%}
+	.col-divide-md-4{flex:auto;max-width:32%}
+	.col-divide-md-3{flex:auto;max-width:24%}
+	.title--section{font-size:30px;margin:22px 0}
+	.dp--none{display:none}
+	.dp--block{display:block}
+	.mr--auto{margin:20px auto}
+	.my--20{margin:20px 0}
+	.dt--none{display:none}
+	.text--center--t{text-align:center}
+	.max--width-700{max-width:100%}
+	.slick-prev{left:13px;top:26%}
+	.slick-next{right:13px;top:26%}
+	.discount .discount__contain .discount__list.row-divide:nth-child(4){max-width:unset;margin:0}
+	.attention .attention__contain .attention__list .attention__clock{max-width:65%}
+	.customer .customer__contain .customer__content .col-divide-6{max-width:100%}
+	.voucher .voucher__content{top:191px;left:87%}
+	.header{position:relative}
+	.header .header__contain .header__item .header__navbar{position:absolute;width:100%;top:75px;text-align:center;right:0;background:#fff}
+	.header .header__contain .header__item .header__navbar li{display:block}
+	.system .system__item-content{position:unset;width:94.5%}
+	.max--width-85-per{max-width:90%}
+	.attention .attention__contain .attention__list .clock__btn button{padding:8px 15px;font-size:14px}
+	#about .why__item-contain.p-30{max-height:305px;overflow:hidden;text-overflow:ellipsis}
+}
+
+@media screen and (max-width: 438px) {
+  .truonghop .only-mobile .ping-btnGift {left: 28%;}
+  .service #content-center .customer__item{padding-bottom: unset;}
+  #service{padding-bottom: unset;}
+  .truonghop .only-mobile .ping-btnGift {left: 24%;}
+  #btn_submit_resource {
+      font-size: larger;
+  }
+  #register-banner-form .signin input {
+    width: 100%;
+}
+  #content-center .intro{padding-left: unset;}
+.only-mobile{display: unset;}
+	.fix-mobile .signin input{margin-top: 6px;font-size: 18px;padding: 5px 5px 5px 15px;
+
+		font-size: 10px;}
+		.fix-mobile	.signin button{font-size: 15px;margin-top: 6px;}
+			.fix-mobile	.ping-btnSignUp{width: 120px;display: none;}
+	.banner__mb {
+		display:block
+		}
+		.positon--ab.border-dao-tao {width: 94%;left: 15px;}
+		.content-step {
+		padding-top:130px
+		}
+
+		.ping-btnTH {
+		left:26.5%
+		}
+
+		#about .why__item-contain.p-30 {
+		max-height:120px;
+		overflow:hidden
+		}
+
+		#recruiment {
+		height:2274px
+		}
+
+		/*#recruiment .row-divide .experience__customer-img img {
+		width:300px;
+		height:300px
+		}*/
+
+		.ping-btnSignUp {
+		left:26.5%;
+		width:150px
+		}
+
+		#discount .signin input {
+		margin-bottom:unset;padding-left: 15px;
+		width:100%
+		}
+
+		#discount .form__input.text--center {
+		margin:10px
+		}
+
+		.ping-btnGift {
+		left:25.6%
+		}
+
+		.ping-btn {
+		left:33%
+		}
+
+		.lips {
+		width:100%
+		}
+
+		body {
+		transition:background-color .5s;
+		font-size:14px
+		}
+
+		.title--section {
+		font-size:25px;
+		margin:10px 0
+		}
+
+		.title--item {
+		font-size:15px
+		}
+
+		.col-divide-sm-12 {
+		flex:auto;
+		max-width:100%
+		}
+
+		.col-divide-sm-6 {
+		flex:auto;
+		max-width:48%
+		}
+
+		.col-divide-sm-4 {
+		flex:auto;
+		max-width:32%
+		}
+
+		.col-divide-sm-3 {
+		flex:auto;
+		max-width:24%
+		}
+
+		.icon--attention {
+		width:40px
+		}
+
+		.logo {
+		width:50px
+		}
+
+		.icon {
+		font-size:18px
+		}
+
+		.btn {
+		font-size:12px
+		}
+
+		.slick-prev {
+		top:40%
+		}
+
+		.slick-next {
+		top:40%
+		}
+
+		.attention .attention__contain .attention__list:nth-child(3) {
+		max-width:100%;
+		margin:0
+		}
+
+		.sign__ingif .attention__clock,.attention .attention__contain .attention__list .attention__clock {
+		max-width:90%
+		}
+
+		.voucher .voucher__content {
+		top:91px;
+		left:85%
+		}
+
+		.voucher .voucher__content .title--section {
+		font-size:20px
+		}
+
+		.system .system__item-content {
+		position:unset;
+		width:88%
+		}
+
+		#dang-ky .btn.signin_valentin.text--light.border--solid-2 {
+		font-size:17px;
+		padding:11px 8px
+		}
+
+}
+@media screen and (max-width: 375px) {
+  #media h3:first-child {
+    font-size: 16.5px;
+}
+    #register-banner-form .signin input {width: 125%;}
+    #btn-submit-mobile{width: 110px;transform: translateX(10%);}
+}
+@media screen and (max-width: 315px) {
+    #register-banner-form .signin input {width: 105%;}
+}

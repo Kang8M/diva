@@ -1,18 +1,13 @@
-<?php 
-  /*
-    Template Name: Album tiện ích
-  */
+<?php
 get_header(); ?>
 
-<div class="page-album">
-  <div class="top-page">
-    <ul>
-      <li><a href="<?php echo esc_url( home_url()); ?>">Trang chủ</a></li>
-      <li><a href="">Thư viện ảnh</a></li>
-    </ul>
-  </div>
-
+<div>
+  <?php if(have_posts()): while ( have_posts() ) : the_post(); ?>
+    <?php the_content(); ?>
+  <?php
+    endwhile;
+    endif;
+  ?>
 </div>
-
 
 <?php get_footer(); ?>

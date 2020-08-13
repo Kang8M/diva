@@ -1,0 +1,493 @@
+@font-face {
+  font-family: SanFranciscoDisplay;
+  src: url(../fonts/SanFranciscoDisplay-Regular.otf);
+}
+@font-face {
+  font-family: SanFranciscoDisplayMedium;
+  src: url(../fonts/SanFranciscoDisplay-Medium.otf);
+}
+@font-face {font-family: SanFranciscoDisplayBold;	src: url(../fonts/SanFranciscoDisplay-Bold.otf);}
+#btn-submit-mobile{width: 150px;padding: 3px;transform: translateX(20%);}
+.txt-center{text-align:center;} .fix-header{text-align: right;}
+.btn-why { border-radius: 30px; color: #fff;margin-top:20px;}
+.da-dang-khoa-hoc {background-image: url(../images/bg-source.png);background-position: center;background-repeat: no-repeat;}
+#dots,#dots2,,#dots3,,#dots4{font-weight:bold;}
+#more,#more2,#more3,#more4{display:none;}
+#myBtnReadmore,#myBtnReadmore2,#myBtnReadmore3,#myBtnReadmore4 {background: none; border: none; font-weight: bold; display: inline;}
+#btn-register-course {display: none;}
+.form-rigister-banner input[type="text"]::-webkit-input-placeholder {color: unset;font-weight: normal;}
+.over-lay-top { position: absolute; top: 20px; color: #fff; width: 100%;font-style: italic;}
+.over-lay-top h3{font-family:Times New Roman;}
+.post-khoa-hoc .why__item{padding: 15px;}
+.bg-dao-tao{z-index: 200;}.service .intro{list-style: none;margin-left: 35px;}
+.service .intro li div{display: inline-block;padding-left: 15px;line-height: 1.9;}
+.fix-padding-mobile{padding: 15px 0;}
+.service .intro li::before {  content: "\25cb";
+	color: #fff;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;}
+  .banner .form-rigister-banner .form__input p{font-size: 11px;
+float: left;
+padding-bottom: unset;}
+.positon--ab.border-dao-tao {
+	top: 0;
+	width: 77%;
+	left: 15px;
+	z-index: 20;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;}
+  #about .why__item.box-shadow.m-15{width:330px;}
+  #about .why__item-contain.p-30 {
+  max-height: 95px;}
+p{font-family: SanFranciscoDisplay;}
+
+h3{font-family: SanFranciscoDisplayMedium;}
+
+/*endfont*/
+.bd--style .form__signin-img img{width: 100%;}
+.bd--style .col-divide-6.col-divide-lg-12{max-width: 50%;}
+.resposive_Modal .title--form-sigin {margin-top: 100px;}
+header .phone_btn.btn.main--background.border--50{color:#fff; font-size:larger;}
+
+.banner .d--block{
+
+	position:relative;
+
+}
+
+.banner .row-divide{
+
+	position:absolute;
+
+	top: 70%;
+
+	margin-left:20%;
+
+
+
+}
+
+#news .detail {
+    background: #fff;
+	padding:10px;
+	height:175px;
+}
+
+.service  p:first-child{
+
+	padding: 0 15px 0 15px;
+
+}
+
+.actual__btn {
+
+    text-align: center;
+
+}
+
+#about div{
+
+	margin: 0 5px;
+
+}
+#btn-submit-banner {
+
+    width: 150px;
+    padding: 5px;
+    margin-top: unset;
+    transform: translateX(50%);
+
+}
+.truonghop .customer__item p{
+	font-weight: bold;
+	padding-left: 25px;
+}
+
+#discount #signupKH{position:relative;z-index:1000;}
+
+#btn-Customers-Signup{
+
+	padding: 10px 30px;
+
+	font-style: normal;
+
+	background-color: antiquewhite;
+
+	border-radius: 200px;
+
+	background: linear-gradient( 90deg,
+
+	rgba(214, 178, 103, 1) 0%,
+
+	rgba(169, 123, 45, 1) 65%);
+
+	margin-bottom: 30px;
+
+	font-weight: 700;
+
+	color:
+
+	white;
+
+}
+
+#btn-bannerSignup {
+
+	font-size: x-large;
+	padding: 10px;
+	z-index:999;
+
+	border:none;
+
+	background-image: linear-gradient(to right, rgba(227,196,127,1) , rgba(147,109,48,1));
+
+}
+#openVideoSection{margin: 0 200px 0 200px;}
+.footer--background {
+
+    background:
+
+    #caa966;
+
+}
+.service #content-center h3{
+	color:#caa966;
+}
+.service #content-center .customer__item {
+	padding: 0 0 25px 0;
+}
+.service #content-center .customer__item:last-child {
+	border-bottom: unset;
+}
+#about .why__item-img.max--height--240{overflow: hidden;
+max-height: 290px;}
+.shorted {
+max-height:428px;
+overflow:hidden
+}
+
+.service img {
+width:80%;
+padding:0
+}
+
+#content-center {
+line-height:1.7;
+padding:0 29px 0 0;
+margin-top:auto;
+margin-bottom:auto;
+margin-left:30px;
+display:block
+}
+.slick-prev,.slick-next{height:40px;width:40px}
+.slick-prev{left:635px}
+.slick-next{right:635px}
+.slick-prev::before,.slick-next::before{color:transparent;background:transparent}
+.slick-prev{background-image:url(../images/Pre.svg)}
+.slick-next{background-image:url(../images/Next.svg)}
+.form-rigister-banner .main--background {background: #fff;color:#8f6116}
+.hidden-desktop,.only-mobile{display: none;}
+.slick-slide{opacity:.5!important}
+.slick-slide.slick-current.slick-active.slick-center{opacity:1!important}
+.service{background-image:url(../images/back-gr-sec-2.jpg);background-repeat:no-repeat;background-position:center;background-size:cover}
+/*.bg-lips{background-image:url(../images/background-phun-moi.png);height:max-content;background-repeat:no-repeat;background-size:cover;border:none;background-repeat:no-repeat;background-size:cover}*/
+.check img{height: 16px;width: 16px;}
+.check{width: 20px;position: absolute;}
+.truonghop .col-divide-5.col-divide-md-12.py-30.text--center img{
+border-radius: 50%;
+height: 286px;
+border: 5px solid
+rgba(214, 178, 103, 1);
+width: 286px;
+height: 286px;
+}
+.da-dang-khoa-hoc .font-bolder{color:#9b7638;}
+.banner__mb .banner__PC_content_right {
+    position: absolute;
+    bottom: 41.5%;
+left: 55%;
+}
+.banner .banner__PC .banner__PC_content_right {
+    position: absolute;
+    bottom: 20%;
+    right:10%;
+}
+.form-rigister-banner .ping-btnSignUp{left: 30%;}
+.form-rigister-banner .ping-btnSignUp{width: 130px;top: 33%;}
+.form-rigister-banner .signin input{border-radius: unset;padding-left: 17px;}
+.post-khoa-hoc {
+	padding-top: 50px;
+	margin-bottom: 20px;
+}
+.truonghop .customer__item p{
+	font-family: SanFranciscoDisplayBold;
+}
+.diva__gift {
+    margin-top: 30px;
+}
+
+.content-step{padding-top:200px;}
+
+#sub-title{font-size: larger;}
+.lips {
+	position:absolute;
+	left:50%;
+	transform:translate(-50%,-50%);
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	z-index:9999;
+	width:585px;
+	height:450px
+	}
+
+	header #btn-header-Signup {
+	margin-right:auto
+	}
+
+	header .phone_btn.btn.main--background.border--50 {
+	margin-right:15px
+	}
+
+	#btn-Signup,#btn-SignupCase {
+	position:relative;
+	z-index:1000;
+	background:linear-gradient(200deg,rgba(227,196,127,1) 0%,rgba(147,109,48,1) 100%);
+	font-size:larger;
+	color:#fff
+	}
+
+	.resposive_Modal .container {
+	border-radius:30px
+	}
+	.resposive_Modal .bd--style{border-radius: unset;}
+	.modalS {
+	display:none;z-index: 1000;
+	position:fixed;
+	padding-top:100px;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background-color:#000;
+	background-color:rgba(0,0,0,0.4)
+	}
+
+	#closevideo {
+		padding-right: 10px;
+	}
+	#modal-Signup {
+	z-index:10000
+	}
+	.content-modal-pop {
+		background: #fff;
+		padding: 5px 10px 5px 10px;
+	}
+	#modal-Signup .close {
+	display:block;
+	padding-right:15px
+	}
+	.close:hover{cursor: pointer;}
+
+	#modal-Signup .container .row-divide.bd--style {
+	/**/ box-shadow: unset;
+	}
+	.bd--style .form__signin-title .style--button{margin-top: 15px;}
+	.modal-content-Signup {
+	margin:auto;
+	padding:20px;
+	width:80%
+	}
+
+	.resposive_Modal .container {
+	width:65%
+	}
+
+	.mobile-Menu #menuToggle {
+	display:none
+	}
+
+	.mobile-Menu li {
+	list-style:none;
+	font-family:SanFranciscoDisplay
+	}
+
+	#btn--Menu {
+	background-image:url(../images/menu-mobile.png);
+	font-family:SanFranciscoDisplay;
+	border:none;
+	display:none;
+	width:24px;
+	height:24px;
+	background-size:cover
+	}
+
+	.mobile-Menu {
+	text-align:center;
+	font-size:large
+	}
+
+	.ping-btn {
+	position:absolute;
+	top:0;
+	left:46.8%;
+	transform:translate(-50%,-50%);
+	width:123px;
+	height:40px;
+	border:3px solid #c7a563;
+	z-index:9;
+	background:#c7a563
+	}
+
+.ping-btnGift {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 43.6%;
+
+    transform: translate(-50%,-50%);
+
+    width: 165px;
+
+    height: 45px;
+
+    border: 3px solid #c7a563;
+
+	z-index: 9;
+
+	background: #c7a563;
+
+}
+
+.ping-btnSignUp{
+
+	position: absolute;
+
+	top: 35%;
+
+	left: 36.6%;
+
+	transform: translate(-50%,-50%);
+
+	width: 165px;
+
+	height: 45px;
+
+	border: 3px solid
+
+	#c7a563;
+
+	z-index: 9;
+
+	background:	#c7a563;
+
+}
+.ping-btnTH{
+	position: absolute;
+
+	top: 0%;
+
+	left: 46%;
+
+	transform: translate(-50%,-50%);
+
+	width: 150px;
+
+	height: 40px;
+
+	border: 3px solid
+
+	#c7a563;
+
+	z-index: 9;
+
+	background:	#c7a563;
+}
+
+
+.ping{-webkit-animation:ping 2s ease-in-out infinite both;animation:ping 2s ease-in-out infinite both}
+
+@-webkit-keyframes ping{0%{-webkit-transform:scale(0);transform:scale(0);opacity:.8}80%{-webkit-transform:scale(1.2);transform:scale(1.2);opacity:0}100%{-webkit-transform:scale(2.2);transform:scale(2.2);opacity:0}}@keyframes ping{0%{-webkit-transform:scale(1.2);transform:scale(1.2);opacity:.6}80%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0.2}100%{-webkit-transform:scale(2.2);transform:scale(2.2);opacity:0}}
+
+
+
+.z--1000{
+
+	position:relative;
+
+	z-index:1000;
+
+
+
+}
+.fix-center {
+    display: flex;
+	margin-top:5px;
+}
+/*vi sao chon diva academy*/
+.why--icon {
+    max-width: 65px;
+	max-height:65px;
+}
+.my--50 {
+    margin: 50px 0px;
+}
+.signup-class img {
+    height: 500px;
+    object-fit: cover;
+}
+.cover-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 55px;
+    z-index: 100;
+}
+
+.why__img.pos:hover{cursor: pointer;}
+
+/*form stydy*/
+.recruitment__register {
+    position: relative;
+}.recruitment__register-imgbackground {
+    display: block;
+}.recruitment__register .recruitment__register-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.recruitment__register .recruitment__register-form h3{color:#fff;margin-top: unset;}
+.recruitment__register .recruitment__register-form .re_name {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    background: rgb(255, 255, 255);
+    border: 2px solid #d2c19d;
+}
+
+input {
+    outline-color: transparent;
+    border: none;
+}
+#formEducation .btn--sendform {
+    width: max-content;
+    padding: 10px 15px;
+}
+.recruitment__register-form .btn--sendform {
+    padding: 0 20px;
+    height: 40px;border: none;
+    border-radius: 30px;
+    background-image: linear-gradient(-90deg, #a47623,#c8a56e);
+	color: #fff;
+	font-weight: bolder;
+}
+.btn__seen{margin-top: 20px;float: right;}

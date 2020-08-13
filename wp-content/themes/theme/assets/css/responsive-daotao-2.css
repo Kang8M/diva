@@ -1,0 +1,628 @@
+.fa,
+
+.fas {
+
+    color: var(--primary-color);
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+
+  .post-khoa-hoc .box-shadow{box-shadow: 4px 2px 7px 3px #80808045;margin-top: 15px;}
+	.banner__PC-content img {
+		width: 50%;
+	}
+	.main_menu.main_menu_hide_on_mobile{
+
+		display:none;
+
+	}
+#discount .container{max-width:100%;}
+	.container{
+
+		max-width:90%;
+
+	}
+
+	/*Row and divide*/
+
+	.col-divide-lg-12 {
+
+        flex: auto;
+
+        max-width: 100%;
+
+    }
+
+
+
+	.col-divide-lg-6 {
+
+        flex: auto;
+
+        max-width: 48%;
+
+    }
+
+
+
+	.col-divide-lg-4 {
+
+        flex: auto;
+
+        max-width: 32%;
+
+    }
+
+
+
+	.col-divide-lg-3 {
+
+        flex: auto;
+
+        max-width: 24%;
+
+    }
+
+	/*Row and divide*/
+
+	.title--section,.title--item{
+
+		text-align: center;
+
+	}
+
+	figure{
+
+		max-width:100%!important;
+
+	}
+
+	/* style truyenthong*/
+
+	.style--inform{
+
+		margin-bottom:20px;
+
+	}
+
+	/* style border-footer*/
+
+	.style--borderfooter{
+
+		border-bottom: 1px solid #eae2e285;
+
+		padding-bottom: 10px;
+
+	}
+
+	.my-t-20{
+
+	  margin:20px 0px;
+
+	}
+
+    /* Nam css*/
+
+    .experience__customer{
+
+        height: 4500px;
+
+    }
+
+
+
+    .experience__customer .experience__customer-img img{
+
+        height: auto;
+
+    }
+
+    .experience__customer .experience__customer-title{
+
+        padding-top:25px;
+
+    }
+
+    .experience__customer{
+
+        background-color: #9e793b;
+
+    }
+
+    .form__signin-title{
+
+        margin-bottom:64px;
+		padding-bottom: 50px;
+    }
+
+    .bd--style{
+
+        box-shadow: 1px 7px 8px grey;
+
+    }
+
+    .diva__gift .style--button{
+
+        margin: 30px 0 30px 0;
+
+    }
+
+    .bg-spraylips .tabcontent img{
+
+        height: auto;
+
+    }
+
+    .style--right{
+
+        float:unset;
+
+        margin-right:0;
+
+    }
+
+    .tab{
+
+        height: 100px;
+
+        padding-left:40px;
+
+    }
+
+    .bg-lips{
+
+        height: max-content;
+
+    }
+
+    .lips{
+
+        height: 348px;
+
+    }
+
+    .diva__gift .diva__gift-image img{
+
+        height: auto;
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+.da-dang-khoa-hoc .mobile-hidden{display: none;}
+	/*Setup*/
+.truonghop .mobile-hidden{display: unset;}
+  .da-dang-khoa-hoc .mobile-hidden .box-shadow{box-shadow: unset;}
+  .truonghop .mobile-hidden {display: none;}
+  .truonghop .only-mobile{display: unset;text-align: left;}
+  .truonghop .only-mobile .row-divide .col-divide-6 {margin-top: 10px;}
+  .truonghop .only-mobile .why__item-content p{padding-left: 10px;}
+
+	#btn--Menu {
+  max-width: 50px;
+	display:block;
+
+	}
+
+	header .phone_btn.btn.main--background.border--50 {
+
+    margin-right: 15px;
+
+    margin-left: 15px;
+
+	}
+
+	body{
+
+		font-size:18px;
+
+	}
+
+	/*Row and divide*/
+
+	.col-divide-md-12 {
+
+        flex: auto;
+
+        max-width: 100%;
+
+    }
+
+
+
+	.col-divide-md-6 {
+
+        flex: auto;
+
+        max-width: 48%;
+
+    }
+
+
+
+	.col-divide-md-4 {
+
+        flex: auto;
+
+        max-width: 32%;
+
+    }
+
+
+
+	.col-divide-md-3 {
+
+        flex: auto;
+
+        max-width: 24%;
+
+    }
+
+	.title--section{
+
+		font-size:30px;
+
+		margin:22px 0px;
+
+	}
+
+	/*Row and divide*/
+
+	.dp--none{
+
+	 display:none;
+
+	}
+
+	.dp--block{
+
+		display:block;
+
+	}
+
+	.mr--auto{
+
+	margin: 20px auto;
+
+	}
+
+	.my--20{
+
+	  margin:20px 0px;
+
+	}
+
+	.dt--none{
+
+		display:none;
+
+	}
+
+	.text--center--t{
+
+	  text-align:center;
+
+	}
+
+	.max--width-700{
+
+	 max-width:100%;
+
+	}
+
+	.slick-prev{
+
+	left:13px;
+
+	top:26%
+
+    }
+
+    .slick-next{
+
+	right:13px;
+
+	top:26%
+
+    }
+
+	/*Setup*/
+
+	.discount .discount__contain .discount__list.row-divide:nth-child(4){
+
+	max-width: unset;
+
+    margin: 0px;
+
+	}
+
+	.attention .attention__contain .attention__list .attention__clock{
+
+	max-width: 65%;
+
+	}
+
+	.customer .customer__contain .customer__content .col-divide-6{
+
+	 max-width:100%;
+
+	}
+
+	.voucher .voucher__content{
+
+	 top: 191px;
+
+     left: 87%;
+
+	}
+
+	/*Header*/
+
+	.header{
+
+	 position:relative;
+
+	}
+
+	.header .header__contain .header__item .header__navbar{
+
+	     position: absolute;
+
+         width: 100%;
+
+         top: 75px;
+
+         text-align: center;
+
+         right: 0;
+
+         background: #fff;
+
+	}
+
+	.header .header__contain .header__item .header__navbar li{
+
+	  display:block;
+
+	}
+
+	/*Header*/
+
+	.system .system__item-content{
+
+	 position:unset;
+
+	 width:94.5%;
+
+	}
+
+	.max--width-85-per{
+
+	 max-width:90%;
+
+	}
+
+	.attention .attention__contain .attention__list .clock__btn button{
+
+    padding: 8px 15px;
+
+    font-size: 14px;
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 475px) {
+
+}
+
+
+
+
+
+@media screen and (max-width: 438px) {
+  .boxchat {
+    display: block;
+}
+  .da-dang-khoa-hoc .mobile-hidden,.truonghop .mobile-hidden{display: none;}
+  .truonghop .only-mobile .why--icon{width: 150%;}
+  .truonghop .only-mobile .why__item-content {text-align: left;padding-left: 10px;font-size: 12.5px;}
+	/*Setup*/
+  .diva__information .style--big-title {
+    padding-top: 50px;}
+	.resposive_Modal .title--form-sigin {margin-top: 20px;}
+	.modal-content-Signup { padding: 5px; }
+  .da-dang-khoa-hoc .only-mobile .why__item{padding-right: unset; padding-left: unset;}
+  .da-dang-khoa-hoc .only-mobile .why__item-contain p{font-size: 12px;}
+  .da-dang-khoa-hoc .only-mobile .max--height--240 img{height: 140px;
+object-fit: cover;}
+	header .phone_btn.btn.main--background.border--50 {
+
+    margin-right: 15px;
+
+    margin-left: 15px;
+
+	}
+
+	.resposive_Modal .container{width:100%;}
+
+	.resposive_Modal .signin input {width:90%;}
+
+	#modal-Signup .container {
+
+    background: unset;
+
+	}
+
+	.resposive_Modal .row-divide.bd--style {
+
+    /*background: #fff;*/
+
+	}
+
+	body {
+
+    transition: background-color .5s;
+
+	font-size:14px;
+
+    }
+
+
+
+	.title--section{
+
+		font-size:25px;
+
+		margin:10px 0px;
+
+	}
+
+	.title--item{
+
+	  font-size:15px;
+
+	}
+
+	/*Row and divide*/
+
+	.col-divide-sm-12 {
+
+        flex: auto;
+
+        max-width: 100%;
+
+    }
+
+
+
+	.col-divide-sm-6 {
+
+        flex: auto;
+
+        max-width: 48%;
+
+    }
+
+
+
+	.col-divide-sm-4 {
+
+        flex: auto;
+
+        max-width: 32%;
+
+    }
+
+
+
+	.col-divide-sm-3 {
+
+        flex: auto;
+
+        max-width: 24%;
+
+    }
+
+	/*Row and divide*/
+
+
+
+	.icon--attention{
+
+	 width: 40px;
+
+	}
+
+	.logo{
+
+	  width:50px;
+
+	}
+
+	.icon{
+
+	 font-size:18px
+
+	}
+
+	.btn{
+
+	 font-size:12px;
+
+	}
+
+	.slick-prev{
+
+	top:40%
+
+    }
+
+    .slick-next{
+
+	top:40%
+
+    }
+
+	/*Setup*/
+
+	.attention .attention__contain .attention__list:nth-child(3){
+
+	 max-width:100%;
+
+	 margin:0px;
+
+	}
+
+    .sign__ingif .attention__clock,.attention .attention__contain .attention__list .attention__clock{
+
+	max-width: 90%;
+
+	}
+
+	.voucher .voucher__content{
+
+	    top: 91px;
+
+        left: 85%;
+
+	}
+
+	.voucher .voucher__content .title--section{
+
+	    font-size: 20px;
+
+	}
+
+	.system .system__item-content{
+
+	 position:unset;
+
+	 width:88%;
+
+	}
+
+	#dang-ky .btn.signin_valentin.text--light.border--solid-2{
+
+	      font-size: 17px;
+
+	      padding:11px 8px;
+
+	}
+
+    .experience__customer{
+
+        height: 2330px;
+
+    }
+
+}

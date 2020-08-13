@@ -1,0 +1,286 @@
+.diva__gift{
+    text-align: center;
+}
+.diva__gift .diva__gift-image img{
+    height:  310px;
+}
+.diva__gift .diva__gift-small-title{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+}
+.diva__gift .title--siz{
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+.diva__gift .row-divide{
+    margin-bottom: 30px;
+}
+.diva__gift .title--section{
+    margin: 0 auto;
+}
+.diva__gift .style--button{
+    text-align: center;
+    margin: 30px 0 13px 0;
+}
+.diva__gift .style--button .siz--button{
+    font-size: 24px;
+}
+
+/* css experience*/
+.experience__customer{
+    background-image: url('../images/bg-trai-nghiem-khach-hang-min.png');
+    height: 900px; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    text-align: center;
+}
+.experience__customer .experience__customer-title{
+    padding-top:205px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    color:#fff;
+}
+.experience__customer .experience__customer-img img{
+    border-radius: 50%;
+    height: 286px;
+    border:5px solid rgba(214, 178, 103, 1);
+}
+.experience__customer .name--customer p{
+    color: #8a5e15;
+    font-weight: 700;
+}
+.experience__customer .name--customer{
+    margin-top:22px;
+}
+.experience__customer .name--customer span{
+    font-size: 21px;
+    font-weight: 700;
+    color: #8a5e15;
+}
+.experience__customer .experience__customer-content{
+    color: #8a5e15;
+}
+
+/* css form-signin*/
+.form__signin-img {
+    text-align: right;
+}
+.header__register-btn {
+    z-index: 200;
+    position: relative;
+}
+.form__signin .col-divide-6{max-width: 50%;}
+
+.form__signin .col-divide-6:nth-child(2){}
+.form__signin-title{
+    background-image: url(../images/bg-right.png);background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form__signin{
+    margin: 50px 0 0 0;padding-bottom: 150px;
+}
+.bd--style{
+    border-radius: 31px;
+    box-shadow: 8px 3px 8px grey;
+}
+.form__signin-img img{
+    width:  85%;
+}
+.title--form-sigin{
+    /*margin-top: 240px;*/
+    padding-top: 50px;
+}
+.signin{
+    text-align: center;
+}
+.signin input{
+    width: 330px;
+padding: 5px;
+font-size: 17px;
+margin-bottom: 23px;
+border-radius: 30px;
+/**/
+border: none;
+}
+.form__signin .siz--button{
+    font-size: 21px;
+    margin-top: 27px;
+}
+
+/* css slick slider*/
+.news__list{
+    padding-bottom: 100px;
+}
+.news__list .slick-prev, .slick-next{
+	z-index:100;
+}
+.news__list .slick-prev:before, .slick-next:before{
+	color: transparent;
+}
+
+.news__list .slick-next{
+    background-image: url(../images/next.png);
+    background-size: cover;
+    top:24%;
+    transform: translateY(0px);
+    transition: all 0.5s;
+    height: 40px;   
+    width: 40px;
+    right: -20px;
+	margin: 0px 15px;
+}
+.news__list .slick-prev{
+    background-image: url(../images/prev.png);
+    background-size: cover;
+    top:24%;
+    height: 40px;   
+    width: 40px;
+    left: 10px;
+    transform: translateY(0px);
+    transition: all 0.5s;
+}
+.news__list .slick-prev:hover, .slick-prev:focus{
+  background-image: url(../images/prev.png);
+  background-size: cover;
+  transform: translateY(-10px);
+}
+.news__list .slick-next:hover, .slick-next:focus{
+  background-image: url(../images/next.png);
+  background-size: cover;
+  transform: translateY(-10px);
+}
+.news__list .slick-slide{
+  opacity:unset !important; 
+  margin: 0px 15px;
+  width: 404px;	
+}
+.news__list .slick-slide.slick-current.slick-active.slick-center{
+  opacity:unset !important;
+}
+/* css video*/
+.video{
+    margin-bottom: 70px; 
+    margin-top: 60px;
+}
+
+/* style quy trinh*/
+
+.method{
+	background-image: url("../images/backgroud-method.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.method__item{
+	position:relative;
+	background: linear-gradient(rgb(230, 193, 117) 0%, rgb(234, 217, 188) 65%);
+	margin-top: 200px;
+}
+.title--method{
+	color: #e0840a;
+}
+.method__item_content{
+	margin: 10px 35px;
+	/* font-size:18px; */
+}
+.method__image{
+	position: absolute;
+    top: -140px;
+    left: 50%;
+	transform: translateX(-50%);
+}
+.method__content{
+	margin-top: 180px;
+    margin-bottom: 20px;
+}
+.method--title-first{
+	padding: 0px 8px;
+    background: white;
+    border-radius: 10px;
+}
+.style--right{
+	float:right;
+	margin-right:30px;
+}
+.border-line{
+	border:1px solid !important;
+}
+.border-b{
+	border:2px solid;
+}
+.py-40{
+	  padding:40px 0px;
+  }
+.method-btn:hover{
+	color: #565552 !important;
+}
+.tab .node{
+	border-radius: 23px;
+    background: #fbfafa;
+    position: absolute;
+    bottom: -6px;
+    right: 0px;
+    z-index: 10000;
+    display: block;
+    height: 10px;
+    width: 10px;
+}
+#method--buoc-1{
+	position:relative;
+}
+/* Style the tab */
+.tab-not{
+	text-align:center;
+	padding: 0px 20px;
+}
+.tab {
+  overflow: hidden;
+  height: 55px;
+  /* border: 1px solid #ccc; */
+  /* background-color: #f1f1f1; */
+}
+.tablinks{
+	border-bottom: 2px solid #b7b5b5;
+}
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  border-bottom: 2px solid #bfb9b9;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 6%;
+  transition: 0.3s;
+  opacity: 0.5;
+  position:relative;
+}
+#buoc-1{
+	display:block;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	border-bottom: 2px solid white;
+	opacity: 1;
+    font-weight: 700;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.bg-spraylips .tabcontent img{
+    height: 350px;
+}
