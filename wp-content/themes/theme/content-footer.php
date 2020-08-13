@@ -116,4 +116,16 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    $(document).ready(function() {
+        // Fix Menu
+        var menu = jQuery("header");
+        jQuery(window).scroll(function() {
+            if (jQuery(window).scrollTop() > 200) {
+                menu.addClass("fix");
+            } else {
+                menu.removeClass("fix");
+            }
+        });
+    });
 </script>
