@@ -4,192 +4,82 @@
 	*/
 get_header(); ?>
 
-<div class="page page-tin-tuc">
-	<div class="top-page">
-	    <img src="<?php echo bloginfo('template_url')?>/assets/images/tin-tuc/bg-1.jpg">
-	    <div class="bread-crumb">
-	    	<a href="<?php echo get_bloginfo( 'wpurl' );?>">
-	    		Trang chủ
-	    	</a>
-	    	<a> > </a>
-		    <a href="<?php echo get_bloginfo( 'wpurl' );?>/gioi-thieu-chung">
-		        Danh sách tin tức
-		    </a>
-	    </div>
-	    <div class="page-header-title">
-	    	TIN TỨC
-	    </div>
-	</div>
+<section class="page__tintuc">
+	<div class="container">
+		<div class="row-divide">
+		<?php
+            $current_page = get_queried_object();
 
-	<div class="page-title"">
-		<h1>Tin nổi bật</h1>
-	</div>
-
-	<div class="page-row row-1">
-		<div class="list-news">
-			<div class="col-news">
-				<?php
-					$count = 0;
-		            $args=array(
-		                'posts_per_page' => 3, 
-		                'cat' => 4,
-		                'order' => 'desc'
-		            );
-		            $query_new = new WP_Query($args);
-		            if( $query_new->have_posts() ) : while( $query_new->have_posts() ) : $query_new->the_post();
-		            	if ($count == 0) :
-			            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-			            $count++;
-		          ?>
-							<div class="news-large">
-								<a href="<?php the_permalink(); ?>" class="news-img">
-									<img src="<?php echo $url;?>">	
-								</a>
-								<div class="news-info">
-									<a href="<?php the_permalink(); ?>" class="news-title">
-										<?php the_title();?>
-									</a>
-									<div class="news-date">
-										<span><?php the_time('j/m/Y'); ?></span>
-									</div>
-									<div class="news-des">
-										<span><?php the_excerpt(); ?></span>
-										<a href="<?php the_permalink(); ?>" class="read-more">Xem thêm</a>
-									</div>
-								</div>				
-							</div>
-				<?php
-					endif;
-		            endwhile;
-		            endif;
-		        ?>
-			</div>
-			<div class="col-news">
-				<?php
-		            if( $query_new->have_posts() ) : while( $query_new->have_posts() ) : $query_new->the_post();
-		            	$count++;
-		            	if ($count > 2) :
-		              	$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );		              	
-		          ?>
-						<div class="news">
-							<a href="<?php the_permalink(); ?>" class="news-img">
-								<img src="<?php echo $url;?>">	
-							</a>
-							<div class="col-news-1">
-								<div class="news-info">
-									<a href="<?php the_permalink(); ?>" class="news-title">
-										<?php the_title();?>
-									</a>
-									<div class="news-date">
-										<span><?php the_time('j/m/Y'); ?></span>
-									</div>
-									<div class="news-des">
-										<span><?php the_excerpt(); ?></span>
-										<a href="<?php the_permalink(); ?>" class="read-more">Xem thêm</a>
-									</div>
-								</div>	
-							</div>			
+            $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+			$args = array(
+                'paged'         => $paged,
+                'posts_per_page' => 12,
+                'cat' => 2,
+                'order'         => 'date',
+                'post_type'     => 'post',
+                'post_status'   => 'publish',
+			);
+			$query_new = new WP_Query($args);
+			if( $query_new->have_posts() ) :
+				while( $query_new->have_posts() ) : 
+					$query_new->the_post();
+					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		?>
+					<div class="col-divide-4 page__tintuc-all col-divide-md-6  col-divide-sm-12">
+						<div class="page__tintuc-img">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo $url;?>"></a>
 						</div>
-
-				<?php
-					endif;
-		            endwhile;
-		            endif;
-		        ?>
-
-			</div>
-		</div>
-
-		<div class="list-news-mobile">
-			<div class="slider-1">
-				<div class="swiper-wrapper">
-					<?php
-			            if( $query_new->have_posts() ) : while( $query_new->have_posts() ) : $query_new->the_post();
-			              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-			        ?>
-					<div class="swiper-slide news">
-						<a href="<?php the_permalink(); ?>" class="news-img">
-							<img src="<?php echo $url;?>">	
-						</a>
-						<div class="news-info">
-							<a href="<?php the_permalink(); ?>" class="news-title">
-								<?php the_title();?>
-							</a>
-							<div class="news-date">
-								<span><?php the_time('j/m/Y'); ?></span>
-							</div>
-							<div class="news-des">
-								<span><?php the_excerpt(); ?></span>
-								<a href="<?php the_permalink(); ?>" class="read-more">Xem thêm</a>
-							</div>
-						</div>				
+						<div class="page__tintuc-date">
+							<i class="fas fa-calendar-alt"></i> <?php the_date(); ?>
+						</div>
+						<div class="page__tintuc-smalltitle">
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						</div>
+						<div class="page__tintuc-content">
+							<?php echo wp_trim_words(trim(strip_tags(get_the_content())), 25, ' […]'); ?>
+						</div>
+						<a href="<?php the_permalink(); ?>">ĐỌC TIẾP →</a>
 					</div>
+			<?php endwhile; ?>
 
-					<?php
-			            endwhile;
-			            endif;
-			        ?>
-
-				</div>
-			</div>
-
+            <?php
+                echo '<nav class="navigation pagination" role="navigation" aria-label="Bài viết" style="display:block !important;">';
+                echo '<h2 class="screen-reader-text">Điều hướng bài viết</h2>';
+                echo '<div class="nav-links">';
+                $start_page = 1;
+                $end_page = $query_new->max_num_pages;
+                if($paged - 2 > $start_page)
+                {
+                    $start_page = $paged - 2;
+                }
+                if($paged + 2 < $end_page)
+                {
+                    $end_page = $paged + 2;
+                }
+                if($paged > $start_page)
+                {
+                    echo '<a class="prev page-numbers" href="'. get_bloginfo( 'wpurl' ).'/tin-tuc/page/'. ($paged - 1) .'/">Trước</a>';
+                }
+                for ($i = $start_page; $i <= $end_page; $i++) {
+                    if($paged == $i)
+                    {
+                        echo '<span aria-current="page" class="page-numbers current">'. $i.'</span>';
+                    }
+                    else{
+                        echo '<a class="page-numbers" href="'. get_bloginfo( 'wpurl' ).'/tin-tuc/page/'.$i.'/">'.$i.'</a>';
+                    }
+                }
+                if($paged < $end_page)
+                {
+                    echo '<a class="next page-numbers" href="'. get_bloginfo( 'wpurl' ).'/tin-tuc/page/'. ($paged + 1) .'/">Tiếp Theo</a>';
+                }
+                echo '</div>';
+                echo '</nav>';
+                wp_reset_postdata();
+            ?>
+		<?php endif; ?>
 		</div>
 	</div>
-
-	<div class="page-title"">
-		<h2>Tin khác</h2>
-	</div>
-
-	<div class="page-row row-2">
-		<div class="wrap-row">
-			<div class="list-news">
-				<?php
-		            $args2 = array(
-		                'posts_per_page' => 9, 
-		                'cat' => 3,
-		                'order' => 'desc'
-		            );
-		            $query_new2 = new WP_Query($args2);
-		            if( $query_new2->have_posts() ) : while( $query_new2->have_posts() ) : $query_new2->the_post();
-		              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-		        ?>
-
-					<div class="news">
-						<a href="<?php the_permalink(); ?>" class="news-img">
-							<img src="<?php echo $url;?>">	
-						</a>
-						<div class="col-news-1">
-							<div class="news-info">
-								<a href="<?php the_permalink(); ?>" class="news-title">
-									<?php the_title();?>
-								</a>
-								<div class="news-date">
-									<span><?php the_time('j/m/Y'); ?></span>
-								</div>
-								<div class="news-des">
-									<span><?php the_permalink(); ?></span>
-									<a href="<?php the_permalink(); ?>" class="read-more">Xem thêm</a>
-								</div>
-							</div>	
-						</div>				
-					</div>
-				<?php
-		            endwhile;
-		            endif;
-		        ?>
-			</div>
-		</div>
-	</div>
-
-</div>
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		var mySwiper = new Swiper ('.slider-1', {
-	      loop: true,
-	      spaceBetween: 10
-	    });
-	});
-</script>
+</section>
 
 <?php get_footer(); ?>

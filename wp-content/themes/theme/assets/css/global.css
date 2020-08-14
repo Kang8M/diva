@@ -1906,7 +1906,7 @@ a.btn.btn-social-icon.btn-pinterest {
 	background-size: cover
 }
 .top_backgroud_overlay:after {
-	background-image: url('../images/wave-horizontal-bg-solid-other-shape.svg');
+	background-image: url('../css/images/wave-horizontal-bg-solid-other-shape.svg');
 	background-repeat: repeat-x;
 	background-position: bottom center;
 	background-attachment: scroll;

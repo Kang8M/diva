@@ -82,5 +82,10 @@ if( function_exists('acf_add_options_page') ) {
       'menu_title'  => 'Trang chủ',
       'parent_slug' => 'theme-general-settings',
   ));
-  
+
+    acf_add_options_sub_page(array(
+        'page_title'  => 'Theme Tin Tức Detail Settings',
+        'menu_title'  => 'Tin Tức Detail',
+        'parent_slug' => 'theme-general-settings',
+    ));
 }
