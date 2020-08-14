@@ -1,39 +1,44 @@
 <section class="home--slider">
     <div class="slider_desktop">
-        <div>
-            <img src="http://localhost/diva/wp-content/uploads/2020/08/banner-web.jpg" title="Viện thẩm mỹ Diva" alt="Viện thẩm mỹ Diva">
-            <div class="content-overlay text-banner-right"></div>
-        </div>
-        <div>
-            <img src="http://localhost/diva/wp-content/uploads/2020/08/Top-Sao-Việt-Trải-Nghiệm-Dịch-Vụ-Tại-DIVA-01.jpg" title="Viện thẩm mỹ Diva" alt="Viện thẩm mỹ Diva">
-            <div class="content-overlay text-banner-right"></div>
-        </div>
+        <?php
+            $a = get_field('homepage_row_1', 'option');
+            foreach ($a as $value) {
+        ?>
+                <div>
+                    <img src="<?php echo $value['images']['url']; ?>" title="<?php echo $value['title']; ?>" alt="<?php echo $value['title']; ?>">
+                    <div class="content-overlay text-banner-right"></div>
+                </div>
+        <?php } ?>
     </div>
 </section>
 
 <section class="introduce my--50">
     <div class="introduce__contain container row-divide">
         <div class="introduce__item col-divide-6 col-divide-md-12">
-            <h2 class="introduce__title title--item">Giới thiệu</h2>
-            <h4 class="introduce__item title--section font--weight--600 text--dark">Về viện thẩm mỹ DIVA</h4>
-            <p></p>
-            <p>Viện Thẩm Mỹ DIVA là trung tâm thẩm mỹ và chăm sóc sắc đẹp hiện đại, với sứ mệnh cung cấp các dịch vụ chăm sóc sắc đẹp hàng đầu. Lấy chất lượng dịch vụ làm mục tiêu cốt lõi để tồn tại, Viện Thẩm Mỹ DIVA luôn cam kết mang đến cho khách hàng công nghệ thẩm mỹ tiên tiến nhất, giúp người Việt có cơ hội sử dụng dịch vụ thẩm mỹ đạt chuẩn Hàn Quốc ngay tại Việt Nam. Sự hài lòng của bạn chính là mục tiêu mà chúng tôi luôn theo đuổi.</p>
-            <p></p>
+            <?php
+                $b = get_field('homepage_row_2', 'option');
+            ?>
+            <h2 class="introduce__title title--item"><?php echo $b['title_1']; ?></h2>
+            <h4 class="introduce__item title--section font--weight--600 text--dark"><?php echo $b['title_2']; ?></h4>
+            <p><?php echo $b['content']; ?></p>
             <div class="introduce__btn">
-                <a class="btn main--background text--upcase text--light" href="#">đọc tiếp</a>
+                <a class="btn main--background text--upcase text--light" href="<?php echo $b['link']; ?>">đọc tiếp</a>
             </div>
         </div>
         <div class="introduce__item col-divide-6 col-divide-md-12 myt--50">
             <div class="introduce__img">
-                <img data-src="http://localhost/diva/wp-content/uploads/2020/08/introduce-1.jpg" alt="introduce-img-1" src="http://localhost/diva/wp-content/uploads/2020/08/introduce-1.jpg">
+                <img data-src="<?php echo $b['images']['url']; ?>" alt="introduce-img-1" src="<?php echo $b['images']['url']; ?>">
             </div>
         </div>
     </div>
 </section>
 
 <section class="ads">
-    <img src="http://localhost/diva/wp-content/uploads/2020/08/banner-web.jpg" alt="ads-banner" class="dp--none">
-    <img data-src="http://localhost/diva/wp-content/uploads/2020/08/banner-web.jpg" alt="ads-banner" class="d--none dp--block" src="http://localhost/diva/wp-content/uploads/2020/08/banner-web.jpg">
+    <?php
+        $c = get_field('homepage_row_3', 'option');
+    ?>
+    <img src="<?php echo $c['url']; ?>" alt="ads-banner" class="dp--none">
+    <img data-src="<?php echo $c['url']; ?>" alt="ads-banner" class="d--none dp--block" src="<?php echo $c['url']; ?>">
 </section>
 
 <section class="service desktop my--50" id="service">

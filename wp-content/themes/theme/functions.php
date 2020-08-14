@@ -23,7 +23,7 @@ function theme_default_image_size() {
 add_filter( 'pre_option_image_default_size', 'theme_default_image_size' );
 
 //Thêm trang quản lý
-require('functions/trang-chu/create-home-type.php');
+//require('functions/trang-chu/create-home-type.php');
 // require('functions/trang-chu/function-row-2.php');
 // require('functions/trang-chu/function-row-3.php');
 // require('functions/trang-chu/function-row-4.php');
@@ -75,6 +75,12 @@ if( function_exists('acf_add_options_page') ) {
     'page_title'  => 'Theme Footer Settings',
     'menu_title'  => 'Footer',
     'parent_slug' => 'theme-general-settings',
+  ));
+
+  acf_add_options_sub_page(array(
+      'page_title'  => 'Theme Footer Settings',
+      'menu_title'  => 'Trang chủ',
+      'parent_slug' => 'theme-general-settings',
   ));
   
 }
