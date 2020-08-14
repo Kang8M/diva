@@ -15,12 +15,13 @@
             $permalink = "";
             $post_image = "";
             $post_title = "";
+            $category = "";
             while ( have_posts() ) : the_post();
             $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
             $category = get_the_category($post->ID);
             $permalink = get_permalink();
             $post_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-            $post_title = the_title();
+            $post_title = get_the_title();
         ?>
       <div class="single__page-breadcum">
           <span><a href="<?php echo home_url( '/' ); ?>"><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a></span>
@@ -91,9 +92,10 @@
                       Những Bài Viết Khác
                   </div>
                     <?php
+
                         $args=array(
                             'posts_per_page' => 5,
-                            'cat' => 2,
+                            'cat' => $category[0]->term_id,
                             'post__not_in'  => array($post->ID)
                         );
                         $query_new = new WP_Query($args);
@@ -180,7 +182,7 @@
                 <?php
                     $args=array(
                         'posts_per_page' => -1,
-                        'cat' => 2,
+                        'cat' => $category[0]->term_id,
                         'order'         => 'date',
                         'post_type'     => 'post',
                         'post_status'   => 'publish',
@@ -221,7 +223,7 @@
                     $slick_active = "";
                   $args=array(
                       'posts_per_page' => -1,
-                      'cat' => 2,
+                      'cat' => $category[0]->term_id,
                       'order'         => 'date',
                       'post_type'     => 'post',
                       'post_status'   => 'publish',
@@ -267,7 +269,7 @@
         <?php
             $args=array(
                 'posts_per_page' => 1,
-                'cat' => 2,
+                'cat' => $category[0]->term_id,
                 'order'         => 'date',
                 'post_type'     => 'post',
                 'post_status'   => 'publish',
@@ -296,7 +298,7 @@
                 <?php
                 $args=array(
                     'posts_per_page' => -1,
-                    'cat' => 2,
+                    'cat' => $category[0]->term_id,
                     'order'         => 'date',
                     'post_type'     => 'post',
                     'post_status'   => 'publish',

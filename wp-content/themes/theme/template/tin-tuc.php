@@ -9,12 +9,13 @@ get_header(); ?>
 		<div class="row-divide">
 		<?php
             $current_page = get_queried_object();
+            $cat = get_category_by_slug($current_page->post_name);
 
             $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 			$args = array(
                 'paged'         => $paged,
                 'posts_per_page' => 12,
-                'cat' => 2,
+                'cat' => $cat->term_id,
                 'order'         => 'date',
                 'post_type'     => 'post',
                 'post_status'   => 'publish',
