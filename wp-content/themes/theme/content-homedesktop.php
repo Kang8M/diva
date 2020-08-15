@@ -2,13 +2,14 @@
     <div class="slider_desktop">
         <?php
             $a = get_field('homepage_row_1', 'option');
+            if(!empty($a)) {
             foreach ($a as $value) {
         ?>
                 <div>
                     <img src="<?php echo $value['images']['url']; ?>" title="<?php echo $value['title']; ?>" alt="<?php echo $value['title']; ?>">
                     <div class="content-overlay text-banner-right"></div>
                 </div>
-        <?php } ?>
+        <?php } } ?>
     </div>
 </section>
 
@@ -42,83 +43,50 @@
 </section>
 
 <section class="service desktop my--50" id="service">
+    <?php
+        $d = get_field('homepage_row_4', 'option');
+    ?>
     <div class="service__contain container">
-        <h3 class="service__title title--section text--upcase my--20 text--primary text--center">các dịch vụ nổi bật</h3>
+        <h3 class="service__title title--section text--upcase my--20 text--primary text--center"><?php echo $c['title']; ?></h3>
         <div class="service__list">
+            <?php
+                if(!empty($d['items'])) {
+                    foreach ($d['items'] as $value) {
+            ?>
             <div class="service__item">
-                <img class="d--block w-100 h-100" id="backgroundHover4" src="http://localhost/diva/wp-content/uploads/2020/08/service-1.jpg" alt="service-img-1">
+                <img class="d--block w-100 h-100" id="backgroundHover4" src="<?php echo $value['images']['url']?>" alt="service-img-1">
                 <div class="service__item-contain text--light center--center">
                     <div>
                         <p class="text--center font--times text--italic">Dịch vụ</p>
-                        <h4 class="text--center title--item text--upcase">Chăm sóc da</h4>
-                        <p class="service__btn text--center"><a href="#" class="btn text--upcase text--light">xem thêm</a></p>
+                        <h4 class="text--center title--item text--upcase"><?php echo $value['title']?></h4>
+                        <p class="service__btn text--center"><a href="<?php echo $value['link']?>" class="btn text--upcase text--light">xem thêm</a></p>
                     </div>
                 </div>
             </div>
-            <div class="service__item">
-                <img class="d--block w-100 h-100" id="backgroundHover1" src="http://localhost/diva/wp-content/uploads/2020/08/phun-may-6d-kien-thuc-tong-quan-ban-can-biet-truoc-khi-thuc-hien-5-768x512-1.jpg" alt="background">
-                <div class="service__item-contain text--light center--center">
-                    <div>
-                        <p class="text--center font--times text--italic">Dịch vụ</p>
-                        <h4 class="text--center title--item text--upcase">điều trị da</h4>
-                        <p class="service__btn text--center"><a href="#" class="btn text--upcase text--light">xem thêm</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="service__item">
-                <img class="d--block w-100 h-100" id="backgroundHover5" src="http://localhost/diva/wp-content/uploads/2020/08/service-1.jpg" alt="service-img-2">
-                <div class="service__item-contain text--light center--center">
-                    <div>
-                        <p class="text--center font--times text--italic">Dịch vụ</p>
-                        <h4 class="text--center title--item text--upcase">Phun mày</h4>
-                        <p class="service__btn text--center"><a href="#" class="btn text--upcase text--light">xem thêm</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="service__item">
-                <img class="d--block w-100 h-100" id="backgroundHover2" src="http://localhost/diva/wp-content/uploads/2020/08/service-3.jpg" alt="background">
-                <div class="service__item-contain text--light center--center">
-                    <div>
-                        <p class="text--center font--times text--italic">Dịch vụ</p>
-                        <h4 class="text--center title--item text--upcase">phun thêu thẩm mỹ</h4>
-                        <p class="service__btn text--center"><a href="#" class="btn text--upcase text--light">xem thêm</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="service__item">
-                <img class="d--block w-100 h-100" id="backgroundHover6" src="http://localhost/diva/wp-content/uploads/2020/08/service-img-3-100.jpg" alt="5">
-                <div class="service__item-contain text--light center--center">
-                    <div>
-                        <p class="text--center font--times text--italic">Dịch vụ</p>
-                        <h4 class="text--center title--item text--upcase">Giảm béo</h4>
-                        <p class="service__btn text--center"><a href="#" class="btn text--upcase text--light">xem thêm</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="service__item">
-                <img class="d--block w-100 h-100" id="backgroundHover3" src="http://localhost/diva/wp-content/uploads/2020/08/service-4.jpg" alt="background">
-                <div class="service__item-contain text--light center--center">
-                    <div>
-                        <p class="text--center font--times text--italic">Dịch vụ</p>
-                        <h4 class="text--center title--item text--upcase">khác</h4>
-                        <p class="service__btn text--center"><a href="" class="btn text--upcase text--light">xem thêm</a></p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                } }
+            ?>
         </div>
     </div>
 </section>
 
 <section class="service--details container--fluid mt--50">
+    <?php
+        $e = get_field('homepage_row_5', 'option');
+    ?>
     <div class="row-divide service--test">
+        <?php
+            if (!empty($e)) {
+                foreach ($e as $value) {
+        ?>
         <div class="service_diva">
             <div class="row-divide">
                 <div class="service__item col-divide-6 col-divide-md-12 thirdyfy--background center--center">
                     <div class="slider-details-service">
                         <div class="service__item-slick text--light">
                             <p class="font-times font-large text--light text--center text--italic">Dịch vụ</p>
-                            <h3 class="customer__item-title title--section text--center text--light text--upcase">Phun mày</h3>
-                            <p class="customer__item-des text--center max--width-500 mx--50 text--overflow"> Bạn luôn tự ti vì đôi lông mày thưa, nhạt, không sắc nét? Bạn tốn quá nhiều công sức và thời gian tại bàn trang điểm để kẻ vẽ mày như ý? Hay đơn giản bạn muốn có cặp lông mày đẹp, màu sắc thời thượng, hợp phong thủy? Phun lông mày thẩm mỹ chính là giải pháp dành cho bạn với những điểm cộng khiến bạn khó lòng chối từ <br>
+                            <h3 class="customer__item-title title--section text--center text--light text--upcase"><?php echo $value['title']?></h3>
+                            <p class="customer__item-des text--center max--width-500 mx--50 text--overflow"><?php echo $value['content']?>
                                 <span class="my--50 font--weight"></span>
                             </p>
                         </div>
@@ -128,83 +96,53 @@
                     <div class="slick-list draggable">
                         <div class="slick-track">
                             <div class="slick-slide" data-slick-index="0" aria-hidden="true"  tabindex="0">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/phun-may-2.jpg" class="d--block image_services_carourel_1" alt="service-diva-images">
+                                <img src="<?php echo $value['images']['url']?>" class="d--block image_services_carourel_1" alt="<?php echo $value['title']?>">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="service_diva">
-            <div class="row-divide">
-                <div class="service__item col-divide-6 col-divide-md-12 thirdyfy--background center--center">
-                    <div class="slider-details-service">
-                        <div class="service__item-slick text--light">
-                            <p class="font-times font-large text--light text--center text--italic">Dịch vụ</p>
-                            <h3 class="customer__item-title title--section text--center text--light text--upcase">Phun môi</h3>
-                            <p class="customer__item-des text--center max--width-500 mx--50 text--overflow"> Phun môi công nghệ Collagen Pha Lê là phương pháp tân tiến nhất hiện nay kết hợp mực phun tự nhiên có bổ sung collagen không chỉ tạo sắc môi tươi tắn theo sở thích mà còn khiến đôi môi căng mọng và quyến rũ từ bên trong với những ưu thế vượt trội so với các phương pháp khác <br>
-                                <span class="my--50 font--weight"></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="service__list-image col-divide-6 col-divide-md-12 slick-initialized slick-slider">
-                    <div class="slick-list draggable">
-                        <div class="slick-track">
-                            <div class="slick-slide" data-slick-index="0" aria-hidden="true"  tabindex="0">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/phun-moi.jpg" class="d--block image_services_carourel_1" alt="service-diva-images">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+            } }
+        ?>
     </div>
 </section>
 <section class="why" id="why">
+    <?php
+        $f = get_field('homepage_row_6', 'option');
+    ?>
     <div class="why__contain container">
         <div class="why__content">
             <h4 class="why__title title--section text--upcase text-primary text--center font--weight--600">
-                Vì Sao 5 Triệu Khách Hàng Chọn Viện Thẩm Mỹ DIVA?
+                <?php echo $f['title']?>
             </h4>
             <p class="why__des text--center font--times font-size-18">
-                Viện Thẩm Mỹ DIVA là nơi giúp bạn chăm sóc sắc đẹp với nhiều dịch vụ đa dạng
-                <span class="d--block">Công nghệ kĩ thuật tiên tiến, kỹ thuật viên tay nghề cao</span>
+                <?php echo $f['content']?>
             </p>
         </div>
         <div class="why__list row-divide hidden-mobile">
             <div class="why__item col-divide-4 col-divide-lg-12">
+                <?php
+                    if(!empty($f['col-1'])) {
+                        foreach ($f['col-1'] as $value) {
+                ?>
                 <div class="row-divide my--50">
                     <div class="why__item-img col-divide-6 why--icon mr--50 center--center">
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_1.png" alt="QUY MÔ RỘNG KHẮP">
+                        <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['title']?>">
                     </div>
                     <div class="why__item-content col-divide-6">
-                        <h6 class="mc-mgb why__item-title title--item">QUY MÔ RỘNG KHẮP</h6>
-                        <p class="why__item-des">Liên tục mở rộng, Lấy khách hàng làm trung tâm là yếu tố cơ bản trong dịch vụ khách hàng.</p>
+                        <h6 class="mc-mgb why__item-title title--item"><?php echo $value['title']?></h6>
+                        <p class="why__item-des"><?php echo $value['content']?></p>
                     </div>
                 </div>
-                <div class="row-divide my--50">
-                    <div class="why__item-img col-divide-6 why--icon mr--50 center--center">
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_2.png" alt="CHỨNG NHẬN UY TÍN">
-                    </div>
-                    <div class="why__item-content col-divide-6">
-                        <h6 class="mc-mgb why__item-title title--item">CHỨNG NHẬN UY TÍN</h6>
-                        <p class="why__item-des">Tạo dựng sự uy tín từ đội ngũ bác sỹ và chuyên viên tay nghề cao.</p>
-                    </div>
-                </div>
-                <div class="row-divide my--50">
-                    <div class="why__item-img col-divide-6 why--icon mr--50 center--center">
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_3.png" alt="NHÂN SỰ CHẤT LƯỢNG">
-                    </div>
-                    <div class="why__item-content col-divide-6">
-                        <h6 class="mc-mgb why__item-title title--item">NHÂN SỰ CHẤT LƯỢNG</h6>
-                        <p class="why__item-des">Đội ngũ nhân sự chuyên nghiệp và thân thiện mang lại sự an tâm cho khách hàng.</p>
-                    </div>
-                </div>
+                <?php
+                    } }
+                ?>
             </div>
             <div class="why__play col-divide-4 col-divide-lg-12 center--center">
-                <a class="why__img pos position--rel " id="whyImg" data-fancybox href="https://www.youtube.com/watch?v=RphVghBq2ek">
-                        <img class="border--50" src="http://localhost/diva/wp-content/uploads/2020/08/center.jpg" alt="why-media">
+                <a class="why__img pos position--rel " id="whyImg" data-fancybox href="<?php echo $f['link_video']?>">
+                        <img class="border--50" src="<?php echo $f['images']['url']?>" alt="media">
                         <div class="cover-play-icon">
                             <i class="fa fa-play-circle-o"></i>
                         </div>
@@ -212,110 +150,70 @@
                 </a>
             </div>
             <div class="why__item col-divide-4 col-divide-lg-12">
-                <div class="row-divide my--50">
-                    <div class="why__item-img col-divide-6 why--icon mr--50  center--center">
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_4.png" alt="CÔNG NGHỆ HIỆN ĐẠI">
-                    </div>
-                    <div class="why__item-content col-divide-6">
-                        <h6 class="why__item-title title--item mc-mgb">CÔNG NGHỆ HIỆN ĐẠI</h6>
-                        <p class="why__item-des">Sử dụng công nghệ mới nhất cùng mỹ phẩm cao cấp trong điều trị.</p>
-                    </div>
-                </div>
-                <div class="row-divide my--50">
-                    <div class="why__item-img col-divide-6 why--icon mr--50  center--center">
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_5.png" alt="PHONG CÁCH CHUYÊN NGHIỆP">
-                    </div>
-                    <div class="why__item-content col-divide-6">
-                        <h6 class="why__item-title title--item mc-mgb">PHONG CÁCH CHUYÊN NGHIỆP</h6>
-                        <p class="why__item-des">Đội ngũ nhân sự là các bác sĩ, chuyên gia thẩm mỹ đầu ngành cùng hàng trăm KTV được đào tạo chuyên nghiệp</p>
-                    </div>
-                </div>
-                <div class="row-divide my--50">
-                    <div class="why__item-img col-divide-6 why--icon mr--50  center--center">
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_6.png" alt="THỜI GIAN LINH HOẠT">
-                    </div>
-                    <div class="why__item-content col-divide-6">
-                        <h6 class="why__item-title title--item mc-mgb">THỜI GIAN LINH HOẠT</h6>
-                        <p class="why__item-des">Hoạt động xuyên suốt từ thứ 2 đến chủ nhật; từ 8h00 sáng - 7h00 tối.</p>
-                    </div>
-                </div>
+                <?php
+                    if(!empty($f['col-2'])) {
+                    foreach ($f['col-2'] as $value) {
+                        ?>
+                        <div class="row-divide my--50">
+                            <div class="why__item-img col-divide-6 why--icon mr--50 center--center">
+                                <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['title']?>">
+                            </div>
+                            <div class="why__item-content col-divide-6">
+                                <h6 class="mc-mgb why__item-title title--item"><?php echo $value['title']?></h6>
+                                <p class="why__item-des"><?php echo $value['content']?></p>
+                            </div>
+                        </div>
+                <?php
+                    } }
+                ?>
             </div>
         </div>
         <!--Mobile -->
         <div class="why__list row-divide mobile myt--20">
             <div class="why__item col-divide-4 col-divide-lg-12">
                 <div class="row-divide">
+                    <?php
+                        if(!empty($f['col-1'])) {
+                        foreach ($f['col-1'] as $value) {
+                    ?>
                     <div class="col-divide-6">
                         <div class="row-divide">
                             <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_1.png" alt="QUY MÔ RỘNG" src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_1.png">
+                                <img src="<?php echo $value['images']['url']?>" alt="QUY MÔ RỘNG">
                             </div>
                             <div class="why__item-content col-divide-6 fix-text-438">
-                                <h6 class="mc-mgb why__item-title title--item">QUY MÔ RỘNG</h6>
-                                <p class="why__item-des">Hệ thống thẩm mỹ lớn nhất Việt Nam với hơn 40 cơ sở.</p>
+                                <h6 class="mc-mgb why__item-title title--item"><?php echo $value['title']?></h6>
+                                <p class="why__item-des"><?php echo $value['content']?></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-divide-6">
-                        <div class="row-divide">
-                            <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_2.png" alt="CHỨNG NHẬN UY TÍN" src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_2.png">
+                    <?php
+                        } }
+                    ?>
+
+                    <?php
+                        if(!empty($f['col-2'])) {
+                        foreach ($f['col-2'] as $value) {
+                    ?>
+                            <div class="col-divide-6">
+                                <div class="row-divide">
+                                    <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
+                                        <img src="<?php echo $value['images']['url']?>" alt="QUY MÔ RỘNG">
+                                    </div>
+                                    <div class="why__item-content col-divide-6 fix-text-438">
+                                        <h6 class="mc-mgb why__item-title title--item"><?php echo $value['title']?></h6>
+                                        <p class="why__item-des"><?php echo $value['content']?></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="why__item-content col-divide-6 fix-text-438">
-                                <h6 class="mc-mgb why__item-title title--item">CHỨNG NHẬN UY TÍN</h6>
-                                <p class="why__item-des">Sự uy tín đến từ đội ngũ bác giỏi và chuyên viên tay nghề cao.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-divide-6">
-                        <div class="row-divide">
-                            <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_3.png" alt="NHÂN SỰ CHẤT LƯỢNG" src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_3.png">
-                            </div>
-                            <div class="why__item-content col-divide-6 fix-text-438">
-                                <h6 class="mc-mgb why__item-title title--item">NHÂN SỰ CHẤT LƯỢNG</h6>
-                                <p class="why__item-des">Khách đến tiếp đón tận tình, khách về dặn dò chu đáo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-divide-6">
-                        <div class="row-divide">
-                            <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_4.png" alt="CÔNG NGHỆ HIỆN ĐẠI" src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_4.png">
-                            </div>
-                            <div class="why__item-content col-divide-6 fix-text-438">
-                                <h6 class="mc-mgb why__item-title title--item">CÔNG NGHỆ HIỆN ĐẠI</h6>
-                                <p class="why__item-des">100% nhập khẩu từ Mỹ với hơn 200 dịch vụ cao cấp.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-divide-6">
-                        <div class="row-divide">
-                            <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_5.png" alt="PHONG CÁCH CHUYÊN NGHIỆP" src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_5.png">
-                            </div>
-                            <div class="why__item-content col-divide-6 fix-text-438">
-                                <h6 class="mc-mgb why__item-title title--item">PHONG CÁCH CHUYÊN NGHIỆP</h6>
-                                <p class="why__item-des">Sự hài lòng của khách hàng là thành công của chúng tôi.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-divide-6">
-                        <div class="row-divide">
-                            <div class="why__item-img col-divide-4 why--icon mr--50 center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_6.png" alt="THỜI GIAN LINH HOẠT" src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_6.png">
-                            </div>
-                            <div class="why__item-content col-divide-6 fix-text-438">
-                                <h6 class="mc-mgb why__item-title title--item">THỜI GIAN LINH HOẠT</h6>
-                                <p class="why__item-des">Phục vụ xuyên suốt 24/7.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        } }
+                    ?>
                 </div>
             </div>
             <div class="why__play col-divide-4 col-divide-lg-12 center--center">
-                <a class="why__img pos position--rel " id="whyImgMobile" data-fancybox href="https://www.youtube.com/watch?v=RphVghBq2ek">
-                    <img class="border--50" src="http://localhost/diva/wp-content/uploads/2020/08/center.jpg" alt="why-media">
+                <a class="why__img pos position--rel " id="whyImgMobile" data-fancybox href="<?php echo $f['link_video']?>">
+                    <img class="border--50" src="<?php echo $f['images']['url']?>" alt="media">
                     <div class="cover-play-icon">
                         <i class="fa fa-play-circle-o"></i>
                     </div>
@@ -324,82 +222,42 @@
         </div>
         <!--endmobile-->
         <div class="why__achievements row-divide hidden-mobile">
+            <?php
+                if(!empty($f['col-3'])) {
+                foreach ($f['col-3'] as $value) {
+            ?>
             <div class="achievement__item col-divide-3 my--phone--15 col-divide-lg-6 col-divide-sm-12">
                 <div class="achievement__title text--center d--flex">
-                    <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-10-1.svg" alt="CHUỖI HỆ THỐNG THẨM MỸ">
-                    <span class="achievement__item-title title--item align--self">40</span>
+                    <img class="icon mr--10" src="<?php echo $value['images']['url']?>" alt="<?php echo $value['title']?>">
+                    <span class="achievement__item-title title--item align--self"><?php echo $value['title']?></span>
                 </div>
                 <p class="achievement__item-des text--center">
-                    Hệ thống chuỗi TMV lớn nhất khu vực phía Nam, mang cơ hội làm đẹp bằng phương pháp hiện đại đến với phụ nữ Việt Nam.
+                    <?php echo $value['content']?>
                 </p>
             </div>
-            <div class="achievement__item col-divide-3 my--phone--15 col-divide-lg-6 col-divide-sm-12">
-                <div class="achievement__title text--center d--flex">
-                    <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-11.svg" alt="BÁC SĨ - CHUYÊN GIA ĐẦU NGÀNH">
-                    <span class="achievement__item-title title--item align--self">200</span>
-                </div>
-                <p class="achievement__item-des text--center">
-                    Quy tụ đội ngũ chuyên gia đầu ngành thẩm mỹ trong và ngoài nước. 100% được đào tạo chuyên sâu và có giấy phép hành nghề.
-                </p>
-            </div>
-            <div class="achievement__item col-divide-3 my--phone--15 col-divide-lg-6 col-divide-sm-12">
-                <div class="achievement__title text--center d--flex">
-                    <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-12-02.svg" alt="CÔNG NGHỆ THẨM MỸ TIÊN TIẾN">
-                    <span class="achievement__item-title title--item align--self">123</span>
-                </div>
-                <p class="achievement__item-des text--center">
-                    Cập nhật xu hướng thẩm mỹ hiện đại &amp; công nghệ thẩm mỹ tiên tiến hàng đầu phù hợp với cơ địa người Việt
-                </p>
-            </div>
-            <div class="achievement__item col-divide-3 my--phone--15 col-divide-lg-6 col-divide-sm-12">
-                <div class="achievement__title text--center d--flex">
-                    <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-13-1.svg" alt="KHÁCH HÀNG">
-                    <span class="achievement__item-title title--item align--self">5 triệu +</span>
-                </div>
-                <p class="achievement__item-des text--center">
-                    Bằng sự chuyên nghiệp và tận tâm, hệ thống chuỗi Thẩm mỹ công nghệ cao DIVA SPA cam kết mang đến cho khách hàng kết quả thẩm mỹ hoàn hảo nhất
-                </p>
-            </div>
+            <?php
+                } }
+            ?>
         </div>
         <!-- Mobile  achievements-->
         <div class="mobile myt--20">
             <div class="row-divide">
+                <?php
+                    if(!empty($f['col-3'])) {
+                    foreach ($f['col-3'] as $value) {
+                ?>
                 <div class="achievement__item col-divide-6 my--phone--15 col-divide-lg-6">
                     <div class="achievement__title text--center">
-                        <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-10-1.svg" alt="CHUỖI HỆ THỐNG THẨM MỸ">
-                        <span class="achievement__item-title title--item align--self">40</span>
+                        <img class="icon mr--10" src="<?php echo $value['images']['url']?>" alt="<?php echo $value['title']?>">
+                        <span class="achievement__item-title title--item align--self"><?php echo $value['title']?></span>
                     </div>
                     <p class="achievement__item-des fix-center-just">
-                        Hệ thống chuỗi TMV lớn nhất khu vực phía Nam, mang cơ hội làm đẹp bằng phương pháp hiện đại đến với phụ nữ Việt Nam.
+                        <?php echo $value['content']?>
                     </p>
                 </div>
-                <div class="achievement__item col-divide-6 my--phone--15 col-divide-lg-6">
-                    <div class="achievement__title text--center">
-                        <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-11.svg" alt="BÁC SĨ - CHUYÊN GIA ĐẦU NGÀNH">
-                        <span class="achievement__item-title title--item align--self">200</span>
-                    </div>
-                    <p class="achievement__item-des fix-center-just">
-                        Quy tụ đội ngũ chuyên gia đầu ngành thẩm mỹ trong và ngoài nước. 100% được đào tạo chuyên sâu và có giấy phép hành nghề.
-                    </p>
-                </div>
-                <div class="achievement__item col-divide-6 my--phone--15 col-divide-lg-6">
-                    <div class="achievement__title text--center">
-                        <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-12-02.svg" alt="CÔNG NGHỆ THẨM MỸ TIÊN TIẾN">
-                        <span class="achievement__item-title title--item align--self">123</span>
-                    </div>
-                    <p class="achievement__item-des fix-center-just">
-                        Cập nhật xu hướng thẩm mỹ hiện đại &amp; công nghệ thẩm mỹ tiên tiến hàng đầu phù hợp với cơ địa người Việt
-                    </p>
-                </div>
-                <div class="achievement__item col-divide-6 my--phone--15 col-divide-lg-6">
-                    <div class="achievement__title text--center">
-                        <img class="icon mr--10" src="http://localhost/diva/wp-content/uploads/2020/08/PRO-DIVAS-LAYOUT-13-1.svg" alt="KHÁCH HÀNG">
-                        <span class="achievement__item-title title--item align--self">5 triệu +</span>
-                    </div>
-                    <p class="achievement__item-des fix-center-just">
-                        Bằng sự chuyên nghiệp và tận tâm, hệ thống chuỗi Thẩm mỹ công nghệ cao DIVA SPA cam kết mang đến cho khách hàng kết quả thẩm mỹ hoàn hảo nhất
-                    </p>
-                </div>
+                <?php
+                    } }
+                ?>
             </div>
         </div>
         <!------------>
@@ -407,132 +265,65 @@
 </section>
 
 <div class="famous my--50 margin-top-100 hidden-mobile">
+    <?php
+        $g = get_field('homepage_row_7', 'option');
+    ?>
     <div class="famous__contain container">
-        <h3 class="famous__title title--section text--center text--upcase text--primary py--30">người nổi tiếng nói về diva</h3>
+        <h3 class="famous__title title--section text--center text--upcase text--primary py--30"><?php echo $g['title']?></h3>
         <div class="famous__list row-divide">
+            <?php
+                if(!empty($g['review'])) {
+                foreach ($g['review'] as $value) {
+            ?>
             <div class="famous__item col-divide-4 my--phone--15 col-divide-md-12">
                 <div class="famous__item-img">
-                    <div class="famous_background" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/review-1.jpg)">
+                    <div class="famous_background" style="background-image: url(<?php echo $value['images']['url']?>)">
                     </div>
                 </div>
                 <div class="famous__item-title text--center my--12">
-                    <p class="font--times">Hoa Hậu Thời Trang</p>
-                    <p class="title--item text--center">TRÚC DIỄM</p>
+                    <p class="font--times"><?php echo $value['title_1']?></p>
+                    <p class="title--item text--center"><?php echo $value['title_2']?></p>
                 </div>
                 <p class="famous__item-des text--center px--30 contain--box">
-                    Diễm vừa trải nghiệm Ombre Shading. Sau khi trải nghiệm rồi thì Diễm đã có một cặp chân mày tự nhiên, như ý và rất là đẹp. Và bây giờ Trúc Diễm ra đường  không mất thời gian để tô vẽ chân mày nữa. Diễm hi vọng chị em nào có nhu cầu thì hãy tìm đến Viện Thẩm Mỹ DIVA
+                    <?php echo $value['content']?>
                 </p>
             </div>
-            <div class="famous__item col-divide-4 my--phone--15 col-divide-md-12">
-                <div class="famous__item-img">
-                    <div class="famous_background" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/review-3.jpg)">
-                    </div>
-                </div>
-                <div class="famous__item-title text--center my--12">
-                    <p class="font--times">Hoa Hậu </p>
-                    <p class="title--item text--center">THU THỦY</p>
-                </div>
-                <p class="famous__item-des text--center px--30 contain--box">
-                    Được bạn bè giới thiệu cũng như tìm hiểu trên mạng tôi đã đến với Thẩm Mỹ DIVA. Và tôi đã lựa chọn Viện Thẩm Mỹ DIVA là nơi chăm sóc làn da cho mình. Với đội ngũ chuyên  nghiệp với 100% các sản phẩm chăm sóc từ tự nhiên.
-                </p>
-            </div>
-            <div class="famous__item col-divide-4 my--phone--15 col-divide-md-12">
-                <div class="famous__item-img">
-                    <div class="famous_background" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/review-2.jpg)">
-                    </div>
-                </div>
-                <div class="famous__item-title text--center my--12">
-                    <p class="font--times">Người Mẫu</p>
-                    <p class="title--item text--center">TUYẾT LAN</p>
-                </div>
-                <p class="famous__item-des text--center px--30 contain--box">
-                    Lan vừa sử dụng dịch vụ phun môi COLLAGEN tại Viện Thẩm Mỹ DIVA. Lan rất yên tâm khi phun môi tại đây. Lan rất hài lòng với màu sắc này bởi sự tư nhiên và trẻ trung của nó. Chắc chắn một điều rằng Lan sẽ giới thiệu bạn bè minh đến với Viện Thẩm Mỹ DIVA.
-                </p>
-            </div>
+            <?php
+                } }
+            ?>
         </div>
         <div class="famous--divider"></div>
     </div>
 </div>
 
 <section id="news" class="newz">
+    <?php
+        $h = get_field('homepage_row_8', 'option');
+    ?>
     <div class="news__contain container">
-        <h3 class="news__title title--section text--center text--primary text--upcase font--weight--500 my--50">BÁO CHÍ NÓI VỀ DIVA</h3>
+        <h3 class="news__title title--section text--center text--primary text--upcase font--weight--500 my--50"><?php echo $h['title']?></h3>
         <div class="news__list">
-            <a href="http://kenh14.vn/tham-my-vien-diva-vi-thanh-hau-giang-qua-tai-trong-ngay-dau-khai-truong-20191111122953863.chn" class="news__item d--block mx--20 mx-mobile" >
+            <?php
+                if(!empty($h['items'])) {
+                foreach ($h['items'] as $value) {
+            ?>
+            <a href="<?php echo $value['link']?>" class="news__item d--block mx--20 mx-mobile" >
                 <div class="news__item-img position--rel">
-                    <img class="news__item-img-main" src="http://localhost/diva/wp-content/uploads/2020/08/diva-news-1.jpg" alt="Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương">
-<!--                    <img class="news__item-img-brand brand--new" src="http://localhost/diva/wp-content/uploads/2020/08/14519_500242276665304_2136612497_n.jpg" alt="logo-brand-news">-->
+                    <img class="news__item-img-main" src="<?php echo $value['images']['url']?>" alt="<?php echo $value['title']?>">
                 </div>
                 <p class="news__item-date my--6">
-                    15/09/2019
+                    <?php echo $value['date']?>
                 </p>
                 <div class="news__item-content">
                     <p class="news__item-title title--item text--left-mb text--none--style-mb">
-                        Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương
+                        <?php echo $value['title']?>
                     </p>
                 </div>
                 <span class="text--upcase"> đọc tiếp →</span>
             </a>
-            <a href="http://kenh14.vn/tham-my-vien-diva-vi-thanh-hau-giang-qua-tai-trong-ngay-dau-khai-truong-20191111122953863.chn" class="news__item d--block mx--20 mx-mobile" >
-                <div class="news__item-img position--rel">
-                    <img class="news__item-img-main" src="http://localhost/diva/wp-content/uploads/2020/08/diva-news-1.jpg" alt="Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương">
-<!--                    <img class="news__item-img-brand brand--new" src="http://localhost/diva/wp-content/uploads/2020/08/14519_500242276665304_2136612497_n.jpg" alt="logo-brand-news">-->
-                </div>
-                <p class="news__item-date my--6">
-                    15/09/2019
-                </p>
-                <div class="news__item-content">
-                    <p class="news__item-title title--item text--left-mb text--none--style-mb">
-                        Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương
-                    </p>
-                </div>
-                <span class="text--upcase"> đọc tiếp →</span>
-            </a>
-            <a href="http://kenh14.vn/tham-my-vien-diva-vi-thanh-hau-giang-qua-tai-trong-ngay-dau-khai-truong-20191111122953863.chn" class="news__item d--block mx--20 mx-mobile" >
-                <div class="news__item-img position--rel">
-                    <img class="news__item-img-main" src="http://localhost/diva/wp-content/uploads/2020/08/diva-news-1.jpg" alt="Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương">
-<!--                    <img class="news__item-img-brand brand--new" src="http://localhost/diva/wp-content/uploads/2020/08/14519_500242276665304_2136612497_n.jpg" alt="logo-brand-news">-->
-                </div>
-                <p class="news__item-date my--6">
-                    15/09/2019
-                </p>
-                <div class="news__item-content">
-                    <p class="news__item-title title--item text--left-mb text--none--style-mb">
-                        Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương
-                    </p>
-                </div>
-                <span class="text--upcase"> đọc tiếp →</span>
-            </a>
-            <a href="http://kenh14.vn/tham-my-vien-diva-vi-thanh-hau-giang-qua-tai-trong-ngay-dau-khai-truong-20191111122953863.chn" class="news__item d--block mx--20 mx-mobile" >
-                <div class="news__item-img position--rel">
-                    <img class="news__item-img-main" src="http://localhost/diva/wp-content/uploads/2020/08/diva-news-1.jpg" alt="Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương">
-<!--                    <img class="news__item-img-brand brand--new" src="http://localhost/diva/wp-content/uploads/2020/08/14519_500242276665304_2136612497_n.jpg" alt="logo-brand-news">-->
-                </div>
-                <p class="news__item-date my--6">
-                    15/09/2019
-                </p>
-                <div class="news__item-content">
-                    <p class="news__item-title title--item text--left-mb text--none--style-mb">
-                        Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương
-                    </p>
-                </div>
-                <span class="text--upcase"> đọc tiếp →</span>
-            </a>
-            <a href="http://kenh14.vn/tham-my-vien-diva-vi-thanh-hau-giang-qua-tai-trong-ngay-dau-khai-truong-20191111122953863.chn" class="news__item d--block mx--20 mx-mobile" >
-                <div class="news__item-img position--rel">
-                    <img class="news__item-img-main" src="http://localhost/diva/wp-content/uploads/2020/08/diva-news-1.jpg" alt="Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương">
-<!--                    <img class="news__item-img-brand brand--new" src="http://localhost/diva/wp-content/uploads/2020/08/14519_500242276665304_2136612497_n.jpg" alt="logo-brand-news">-->
-                </div>
-                <p class="news__item-date my--6">
-                    15/09/2019
-                </p>
-                <div class="news__item-content">
-                    <p class="news__item-title title--item text--left-mb text--none--style-mb">
-                        Thẩm mỹ viện DIVA Vị Thanh - Hậu Giang “quá tải” trong ngày đầu khai trương
-                    </p>
-                </div>
-                <span class="text--upcase"> đọc tiếp →</span>
-            </a>
+            <?php
+                } }
+            ?>
         </div>
     </div>
 </section>
@@ -543,110 +334,54 @@
             Tin Tức - Sự Kiện
         </p>
         <div class="lastest--news__list">
+            <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 10,
+                    'order' => 'desc',
+                );
+                $wp_query = new WP_Query($args);
+                if( $wp_query->have_posts() ) : while( $wp_query->have_posts() ) : $wp_query->the_post();
+            ?>
             <div class="lastest--news__item col-divide-3 col-divide-sm-6 mx--15">
-                <a href="#" tabindex="0">
+                <a href="<?php get_permalink();?>" tabindex="0">
                     <div class="item__img">
-                        <div class="fix-bg-latest_news" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/cuba-ho-tro-viet-nam-chong-dich-covid19-2.jpg);"></div>
+
+                        <?php the_post_thumbnail() ; ?>
                     </div>
-                    <span class="date my--6 d--block"><i class="fas fa-calendar-alt"></i>06/08/2020</span>
-                    <p class="title--item text--left-mb text--none--style-mb">Cuba Tặng Thuốc, Cử Chuyên Gia Sang Việt Nam Hỗ Trợ...</p>
-                    <p>Số vật tư được trao tặng cho Việt Nam gồm hàng ngàn...</p>
+                    <span class="date my--6 d--block"><i class="fas fa-calendar-alt"></i><?php echo get_the_date('', $post->ID);?></span>
+                    <p class="title--item text--left-mb text--none--style-mb"><?php the_title(); ?></p>
+                    <p><?php the_excerpt();?></p>
                     <span class="text--upcase"> đọc tiếp →</span>
                 </a>
             </div>
-            <div class="lastest--news__item col-divide-3 col-divide-sm-6 mx--15">
-                <a href="#" tabindex="0">
-                    <div class="item__img">
-                        <div class="fix-bg-latest_news" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/co-so-tham-my-diva-tai-da-nang.jpg);"></div>
-                    </div>
-                    <span class="date my--6 d--block"><i class="fas fa-calendar-alt"></i>05/08/2020</span>
-                    <p class="title--item text--left-mb text--none--style-mb">DIVA SPA – Thay Đổi Nhận Diện Thương Hiệu</p>
-                    <p>Hành trình phát triển của DIVA SPA&nbsp; Thành lập từ năm 2014,...</p>
-                    <span class="text--upcase"> đọc tiếp →</span>
-                </a>
-            </div>
-            <div class="lastest--news__item col-divide-3 col-divide-sm-6 mx--15">
-                <a href="#" tabindex="0">
-                    <div class="item__img">
-                        <div class="fix-bg-latest_news" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/3-vien-tham-my-diva-chong-dich-mua-covid-19-022-1.jpg);"></div>
-                    </div>
-                    <span class="date my--6 d--block"><i class="fas fa-calendar-alt"></i>31/07/2020</span>
-                    <p class="title--item text--left-mb text--none--style-mb">Viện Thẩm Mỹ DIVA Đảm Bảo An Toàn, Phục Vụ Khách...</p>
-                    <p>Trước khi có dịch, Viện thẩm mỹ DIVA vẫn luôn rất chú...</p>
-                    <span class="text--upcase"> đọc tiếp →</span>
-                </a>
-            </div>
-            <div class="lastest--news__item col-divide-3 col-divide-sm-6 mx--15">
-                <a href="#" tabindex="0">
-                    <div class="item__img">
-                        <div class="fix-bg-latest_news" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/vien-tham-my-diva-chong-dich-covid-19.-5-1.jpg);"></div>
-                    </div>
-                    <span class="date my--6 d--block"><i class="fas fa-calendar-alt"></i>30/07/2020</span>
-                    <p class="title--item text--left-mb text--none--style-mb">Hướng Dẫn Đeo Khẩu Trang Đúng Cách Phòng Lây Nhiễm...</p>
-                    <p>Bộ Y tế yêu cầu người dân rửa tay, đeo khẩu trang đúng...</p>
-                    <span class="text--upcase"> đọc tiếp →</span>
-                </a>
-            </div>
-            <div class="lastest--news__item col-divide-3 col-divide-sm-6 mx--15">
-                <a href="#" tabindex="-1">
-                    <div class="item__img">
-                        <div class="fix-bg-latest_news" style="background-image: url(http://localhost/diva/wp-content/uploads/2020/08/vien-tham-my-diva-chong-dich-mua-covid-19.jpg);"></div>
-                    </div>
-                    <span class="date my--6 d--block"><i class="fas fa-calendar-alt"></i>30/07/2020</span>
-                    <p class="title--item text--left-mb text--none--style-mb">Hướng Dẫn Quy Trình Rửa Tay Theo Chuẩn Bộ Y Tế</p>
-                    <p>Tầm quan trọng của việc rửa tay đúng cách Tổ chức Y...</p>
-                    <span class="text--upcase"> đọc tiếp →</span>
-                </a>
-            </div>
+            <?php
+                endwhile;
+                endif;
+            ?>
         </div>
     </div>
 </section>
 
 <section class="keyword-top-search" id="ketWordSearch">
+    <?php
+        $k = get_field('homepage_row_10', 'option');
+    ?>
     <div class="container">
         <div class="title--section text--upcase text--center">
             TÌM KIẾM NHIỀU
         </div>
         <div class="top_search">
+            <?php
+                if(!empty($k)) {
+                foreach ($k as $value) {
+            ?>
             <div class="top_search-content">
-                <a href="#">Spa Gò Vấp</a>
+                <a href="<?php echo $value['link']?>"><?php echo $value['title']?></a>
             </div>
-            <div class="top_search-content">
-                <a href="#">Triệt lông Hồ Chí Minh</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/phun-may-o-ho-chi-minh/">Phun mày Hồ Chí Minh</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/phun-moi-o-ho-chi-minh/">Phun môi Hồ Chí Minh</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/tri-seo-tai-da-nang/">Trị sẹo Đà Nẵng</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/tri-mun-hau-giang/">Trị mụn Hậu Giang</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/tam-trang-phi-thuyen-hau-giang/">Tắm trắng Hậu Giang</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/xoa-xam-ho-chi-minh/">Xóa xăm Hồ Chí Minh</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/tri-seo-o-ho-chi-minh/">Trị sẹo rỗ Hồ Chí Minh</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/tri-mun-o-ho-chi-minh/">Trị mụn Hồ Chí Minh</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/phun-moi-tai-binh-duong/">Phun môi Bình Dương</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/phun-may-o-binh-duong/">Phun mày Bình Dương</a>
-            </div>
-            <div class="top_search-content">
-                <a href="https://vienthammydiva.vn/tam-trang-phi-thuyen-o-ho-chi-minh-uy-tin/">Tắm trắng Hồ Chí Minh</a>
-            </div>
+            <?php
+                } }
+            ?>
         </div>
     </div>
 </section>
