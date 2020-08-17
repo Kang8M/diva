@@ -13,18 +13,21 @@
     </title>
     <meta http-equiv="Content-Type" content="text/shtml" charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Sunshine Group">
-    <meta property="og:title" content="Sunshine Group" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Quần thể nghỉ dưỡng phức hợp, hội tụ mọi hoạt động du lịch, diện cho tất cả những gì hiện đại và siêu phong cách, từ các dịch vụ nghỉ dưỡng, ăn uống, mua sắm đến vui chơi giải trí thời thượng và sang chảnh, thỏa mãn mọi giác quan và cung bậc cảm xúc của khách du lịch." />
-    <meta property="og:url" content="http://goldenriver.sunshinegroup.vn/" />
-    <meta property="og:image" content="http://goldenriver.sunshinegroup.vn/wp-content/themes/goldsun/assets/images/home/banner-1-1.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1920" />
-    <meta property="og:image:height" content="1080" />
-    <meta property="og:image:alt" content="Sunshine Group" />
+    <meta name="author" content="TAT">
+    <meta name="description" content="<?php echo get_field('header_meta_description', 'option');?>"/>
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <link rel="canonical" href="<?php echo get_field('header_link_canonical', 'option');?>" />
+    <meta property="og:title" content="<?php echo get_field('header_og_title', 'option');?>" />
+    <meta property="og:type" content="<?php echo get_field('header_og_type', 'option');?>" />
+    <meta property="og:description" content="<?php echo get_field('header_og_description', 'option');?>" />
+    <meta property="og:url" content="<?php echo get_field('header_og_url', 'option');?>" />
+    <meta property="og:image" content="<?php echo get_field('header_og_images', 'option')['url'];?>" />
+    <meta property="og:image:type" content="<?php echo get_field('header_og_images_type', 'option');?>" />
+    <meta property="og:image:width" content="<?php echo get_field('header_og_images_width', 'option');?>" />
+    <meta property="og:image:height" content="<?php echo get_field('header_og_images_height', 'option');?>" />
+    <meta property="og:image:alt" content="<?php echo get_field('header_og_images_alt', 'option');?>" />
 
-    <link rel="shortcut icon" href="http://localhost/diva/wp-content/uploads/2020/08/ioc.ico">
+    <link rel="shortcut icon" href="<?php echo get_field('shortcut_icon', 'option')['url'];?>">
 
     <link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/css/responsive-daotao.css">
@@ -61,7 +64,7 @@
 
             <div class="header__item container">
 
-                <a class="header__brand d--inline-block logo" style="width:110px;" href=""><img src="http://localhost/diva/wp-content/uploads/2020/08/Visa-logo_CMYK-01.png">
+                <a class="header__brand d--inline-block logo" style="width:110px;" href=""><img src="<?php echo get_field('header_logo', 'option')['url'];?>">
 
                 </a>
 
@@ -115,10 +118,13 @@
     </header>
 
     <section class="banner">
+        <?php
+            $a = get_field('daotao_row_1', 'option');
+        ?>
         <div class="banner__PC dt--none positon--relative">
-            <img class="d--block" src="<?php echo bloginfo('template_url')?>/assets/images/banner.jpg" alt="banner-diva-phun-may">
+            <img class="d--block" src="<?php echo $a['images_1']['url']?>" alt="banner-diva-phun-may">
             <div class="banner__PC-content">
-                <img class="d--block fade-in-fwd" src="<?php echo bloginfo('template_url')?>/assets/images/banner-content.png" alt="banner-diva-phun-may-content">
+                <img class="d--block fade-in-fwd" src="<?php echo $a['images_2']['url']?>" alt="banner-diva-phun-may-content">
             </div>
             <div class="banner__PC_content_right">
                 <img class="d--block fade-in-fwd" src="<?php echo bloginfo('template_url')?>/assets/images/fix-pare.png" alt="banner-diva-phun-may-content">
@@ -154,7 +160,7 @@
             </div>
         </div>
         <div class="banner__mb d--none dt--block positon--relative">
-            <img class="d--block" src="<?php echo bloginfo('template_url')?>/assets/images/banner-mb.jpg" alt="banner-diva-phun-may">
+            <img class="d--block" src="<?php echo $a['images_mobile']['url']?>" alt="banner-diva-phun-may">
             <div class="banner__PC_content_right">
                 <!-- form register-->
                 <div class="form__signin form-rigister-banner fix-mobile" id="register-banner-form">
@@ -186,74 +192,34 @@
     </section>
 
     <section class="da-dang-khoa-hoc" id="resource">
+        <?php
+            $b = get_field('daotao_row_2', 'option');
+        ?>
         <div class="why post-khoa-hoc">
-            <h3 class="discount__title title--section text--center text--upcase">ĐA DẠNG CÁC KHÓA HỌC TẠI DIVA ACADEMY</h3>
+            <h3 class="discount__title title--section text--center text--upcase"><?php echo $b['title']?></h3>
             <div class="why__list ">
+                <?php
+                    if(!empty($b['items'])) {
+                    foreach ($b['items'] as $value) {
+                ?>
                 <div>
                     <div>
-                        <div class="why__item  box-shadow m-15" style="width: 100%; display: inline-block;">
-                            <div class="why__item-img max--height--240"> <img src="http://localhost/diva/wp-content/uploads/2020/08/spa-basic.jpg" alt="khóa học spa cơ bản"> </div>
+                        <div class="why__item  box-shadow m-15">
+                            <div class="why__item-img max--height--240"> <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['title']?>"> </div>
                             <div class="why__item-contain  p-30">
-                                <p>khóa học spa cơ bản</p>
+                                <p><?php echo $value['title']?></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <div class="why__item  box-shadow m-15" style="width: 100%; display: inline-block;">
-                            <div class="why__item-img max--height--240"> <img src="http://localhost/diva/wp-content/uploads/2020/08/spa-basic.jpg" alt="khóa học spa cơ bản"> </div>
-                            <div class="why__item-contain  p-30">
-                                <p>khóa học spa cơ bản</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div class="why__item  box-shadow m-15" style="width: 100%; display: inline-block;">
-                            <div class="why__item-img max--height--240"> <img src="http://localhost/diva/wp-content/uploads/2020/08/spa-basic.jpg" alt="khóa học spa cơ bản"> </div>
-                            <div class="why__item-contain  p-30">
-                                <p>khóa học spa cơ bản</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div class="why__item  box-shadow m-15" style="width: 100%; display: inline-block;">
-                            <div class="why__item-img max--height--240"> <img src="http://localhost/diva/wp-content/uploads/2020/08/spa-basic.jpg" alt="khóa học spa cơ bản"> </div>
-                            <div class="why__item-contain  p-30">
-                                <p>khóa học spa cơ bản</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div class="why__item  box-shadow m-15" style="width: 100%; display: inline-block;">
-                            <div class="why__item-img max--height--240"> <img src="http://localhost/diva/wp-content/uploads/2020/08/spa-basic.jpg" alt="khóa học spa cơ bản"> </div>
-                            <div class="why__item-contain  p-30">
-                                <p>khóa học spa cơ bản</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div class="why__item  box-shadow m-15" style="width: 100%; display: inline-block;">
-                            <div class="why__item-img max--height--240"> <img src="http://localhost/diva/wp-content/uploads/2020/08/spa-basic.jpg" alt="khóa học spa cơ bản"> </div>
-                            <div class="why__item-contain  p-30">
-                                <p>khóa học spa cơ bản</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    } }
+                ?>
             </div>
             <div class="attention__list row-divide max--width--1000 myt-10">
                 <div class="container">
                     <p class="mb--10 text--center font-bolder">
-                        Ngoài ra còn có rất nhiều khóa học với mức phí phù hợp dành cho mọi đối tượng học viên khác nhau.<span class="d--block">Để được tư vấn chi tiết về khóa học và hưởng ƯU ĐÃI vui lòng:</span>
+                        <?php echo $b['content']?>
                     </p>
                     <div class="col-divide-12 col-divide-sm-12 btn__seen center--center">
                         <button class="header__register-btn btn main--background text--light text--upcase border--4 mb--47" id="btn-register-course">ĐĂNG Ký khóa học</button>
@@ -264,14 +230,17 @@
     </section>
 
     <section class="service">
+        <?php
+            $c = get_field('daotao_row_3', 'option');
+        ?>
         <div class="py-30" id="service">
             <div class="container">
-                <h3 class="discount__title title--section text--center text--light text--upcase"> "ĐỔI ĐỜI" TỪ DIVA ACADEMY</h3>
+                <h3 class="discount__title title--section text--center text--light text--upcase"><?php echo $c['title']?></h3>
                 <div class="attention__list row-divide max--width--1000 myt-10">
                     <div class="col-divide-6 col-divide-md-12 py-30">
                         <div class="positon--relative">
                             <img src="<?php echo bloginfo('template_url')?>/assets/images/border.png" class="positon--relative bg-dao-tao">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/dao-tao.jpg" class="positon--ab border-dao-tao">
+                            <img src="<?php echo $c['images']['url']?>" class="positon--ab border-dao-tao">
                         </div>
                     </div>
 
@@ -279,13 +248,18 @@
 
                         <div class="customer__item">
 
-                            <h3 class="text--italic text--light">Đem đến cơ hội việc làm <div>lâu dài cho hàng ngàn học viên</div></h3>
+                            <h3 class="text--italic text--light"><?php echo $c['content']['title']?></h3>
 
                             <p class="text--center--t">
                             </p><ul class="intro text--light">
-                                <li><div>Cơ hội việc làm <b class="text--upcase">hấp dẫn</b></div></li>
-                                <li><div>Thời gian học <b class="text--upcase">NGẮN HẠN</b></div></li>
-                                <li><div>Thu nhập <b class="text--upcase">KHÔNG GIỚI HẠN</b></div></li>
+                                <?php
+                                    if(!empty($c['content']['items'])) {
+                                    foreach ($c['content']['items'] as $value) {
+                                ?>
+                                <li><div><?php echo $value['content']?></div></li>
+                                <?php
+                                    } }
+                                ?>
                             </ul>
                             <p></p>
                         </div>
@@ -296,112 +270,57 @@
     </section>
 
     <section class="truonghop" id="about-diva">
+        <?php
+            $d = get_field('daotao_row_4', 'option');
+        ?>
         <div class="py-30">
             <div class="container">
-                <h3 class="discount__title title--section text--center text--upcase"> tại sao nên chọn diva academy ?</h3>
+                <h3 class="discount__title title--section text--center text--upcase"><?php echo $d['title']?></h3>
                 <div class="row-divide mobile-hidden">
                     <div class="why__item col-divide-4 col-divide-lg-12">
+                        <?php
+                            if(!empty($d['box_row_1'])) {
+                            foreach ($d['box_row_1'] as $value) {
+                        ?>
                         <div class="row-divide my--50">
                             <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_1-1.png" alt="QUY MÔ RỘNG KHẮP">
+                                <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['content']?>">
                             </div>
                             <div class="why__item-content col-divide-6">
                                 <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Là hệ thống thẩm mỹ lớn nhất việt nam hiện nay</p>
+                                <p class="why__item-des"><?php echo $value['content']?></p>
                             </div>
                         </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/doi_ngu.png" alt="Đội ngũ giảng viên giỏi, giàu kinh nghiệm">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Đội ngũ giảng viên giỏi, giàu kinh nghiệm</p>
-                            </div>
-                        </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_2-1.png" alt="NHÂN SỰ CHẤT LƯỢNG">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Được cấp bằng chính quy, giá trị vinh viễn</p>
-                            </div>
-                        </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/ketnoi.png" alt="QUY MÔ RỘNG KHẮP">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">80% thực hành 20% lý thuyết</p>
-                            </div>
-                        </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/ho_tro_vieclam.png" alt="QUY MÔ RỘNG KHẮP">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Hỗ trợ việc làm sau tốt nghiệp</p>
-                            </div>
-                        </div>
+                        <?php
+                            } }
+                        ?>
                     </div>
 
                     <div class="why__play col-divide-4 col-divide-lg-12 center--center">
-                        <div class="why__img pos positon--relative" id="whyImg">
-                            <img class="border--50" src="http://localhost/diva/wp-content/uploads/2020/08/diva-55.jpg" alt="why-media">
+                        <div class="why__img pos positon--relative" id="whyImg" data-fancybox href="<?php echo $d['link_video']?>">
+                            <img class="border--50" src="<?php echo $d['images']['url']?>" alt="why-media">
                             <div class="cover-play-icon">
                                 <i class="fa fa-play-circle-o"></i>
                             </div>
                         </div>
                     </div>
                     <div class="why__item col-divide-4 col-divide-lg-12">
+                        <?php
+                            if(!empty($d['box_row_2'])) {
+                            foreach ($d['box_row_2'] as $value) {
+                        ?>
                         <div class="row-divide my--50">
                             <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_4-1.png" alt="CÔNG NGHỆ HIỆN ĐẠI">
+                                <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['content']?>">
                             </div>
                             <div class="why__item-content col-divide-6">
                                 <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Giáo trình theo chuẩn quốc tế</p>
+                                <p class="why__item-des"><?php echo $value['content']?></p>
                             </div>
                         </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/dayhoc.png" alt="PHONG CÁCH CHUYÊN NGHIỆP">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Thực hành cn tiên tiến ngành spa</p>
-                            </div>
-                        </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_6-1.png" alt="THỜI GIAN LINH HOẠT">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Thời gian học chủ động, linh hoạt</p>
-                            </div>
-                        </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/giangvien-hd.png" alt="THỜI GIAN LINH HOẠT">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Giảng viên hướng dẫn 1-1</p>
-                            </div>
-                        </div>
-                        <div class="row-divide my--50">
-                            <div class="why__item-img col-divide-6 why--icon center--center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/vitr-i.png" alt="THỜI GIAN LINH HOẠT">
-                            </div>
-                            <div class="why__item-content col-divide-6">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Tuỳ chọn địa điểm theo tỉnh, thành</p>
-                            </div>
-                        </div>
+                        <?php
+                            } }
+                        ?>
                     </div>
                     <!--Button-->
                     <div class="col-divide-lg-12 txt-center">
@@ -417,100 +336,42 @@
                 <!-- Only mobile -->
                 <div class="only-mobile text--center">
                     <div class="row-divide">
+                        <?php
+                            if(!empty($d['box_row_1'])) {
+                            foreach ($d['box_row_1'] as $value) {
+                        ?>
                         <div class="col-divide-6 fix-center">
                             <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_1-1.png" alt="QUY MÔ RỘNG KHẮP">
+                                <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['content']?>">
                             </div>
                             <div class="why__item-content fix-center">
                                 <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Là hệ thống thẩm mỹ lớn nhất việt nam hiện nay</p>
+                                <p class="why__item-des"><?php echo $value['content']?></p>
                             </div>
                         </div>
-                        <div class="col-divide-6 fix-center">
-                            <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_4-1.png" alt="QUY MÔ RỘNG KHẮP">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Giáo trình theo chuẩn quốc tế</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 center--center">
-                            <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/doi_ngu.png" alt="Đội ngũ giảng viên giỏi, giàu kinh nghiệm">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Đội ngũ giảng viên giỏi, giàu kinh nghiệm</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 center--center">
-                            <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/dayhoc.png" alt="Thực hành cn tiên tiến ngành spa">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Thực hành cn tiên tiến ngành spa</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 center--center">
-                            <div class="why__item-img  why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_2-1.png" alt="Được cấp bằng chính quy, giá trị vinh viễn">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Được cấp bằng chính quy, giá trị vinh viễn</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 center--center">
-                            <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/why_icon_6-1.png" alt="Thời gian học chủ động, linh hoạt">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Thời gian học chủ động, linh hoạt</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 fix-center">
-                            <div class="why__item-img  why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/ketnoi.png" alt="80% thực hành 20% lý thuyết">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">80% thực hành 20% lý thuyết</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 fix-center">
-                            <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/giangvien-hd.png" alt="Đội ngũ giảng viên giỏi, giàu kinh nghiệm">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Giảng viên hướng dẫn 1 - 1</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 fix-center">
-                            <div class="why__item-img  why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/ho_tro_vieclam.png" alt="Hỗ trợ việc làm sau tốt nghiệp">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Hỗ trợ việc làm sau tốt nghiệp</p>
-                            </div>
-                        </div>
-                        <div class="col-divide-6 fix-center">
-                            <div class="why__item-img why--icon fix-center">
-                                <img src="http://localhost/diva/wp-content/uploads/2020/08/vitr-i.png" alt="Giảng viên hướng dẫn 1-1">
-                            </div>
-                            <div class="why__item-content fix-center">
-                                <h6 class="mc-mgb why__item-title title--item"></h6>
-                                <p class="why__item-des">Tùy chọn địa điểm theo tỉnh, thành</p>
-                            </div>
-                        </div>
+                        <?php
+                            } }
+                        ?>
 
+                        <?php
+                            if(!empty($d['box_row_1'])) {
+                            foreach ($d['box_row_1'] as $value) {
+                        ?>
+                        <div class="col-divide-6 center--center">
+                            <div class="why__item-img why--icon fix-center">
+                                <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['content']?>">
+                            </div>
+                            <div class="why__item-content fix-center">
+                                <h6 class="mc-mgb why__item-title title--item"></h6>
+                                <p class="why__item-des"><?php echo $value['content']?></p>
+                            </div>
+                        </div>
+                        <?php
+                            } }
+                        ?>
                         <div class="why__play col-divide-lg-12 center--center py-50 fix-padding-mobile">
-                            <div class="why__img pos positon--relative txt-center" id="whyImg2">
-                                <img class="border--50" src="http://localhost/diva/wp-content/uploads/2020/08/diva-55.jpg" alt="why-media">
+                            <div class="why__img pos positon--relative txt-center" id="whyImg2"  data-fancybox href="<?php echo $d['link_video']?>">
+                                <img class="border--50" src="<?php echo $d['images']['url']?>" alt="why-media">
                                 <!--<div class="cover-play-icon">
                                 <i class="far fa-play-circle"></i>
                               </div>-->
@@ -536,18 +397,23 @@
     </section>
 
     <section class="experience__customer" id="recruiment">
-
+        <?php
+            $e = get_field('daotao_row_5', 'option');
+        ?>
         <div class="container">
 
-            <h3 class="text--center experience__customer-title">TRẢI NGHIỆM CỦA CÁC HỌC VIÊN TẠI DIVA ACADEMY</h3>
+            <h3 class="text--center experience__customer-title"><?php echo $e['title']?></h3>
 
             <div class="row-divide mobile-hidden">
-
+                <?php
+                    if(!empty($e['items'])) {
+                    foreach ($e['items'] as $value) {
+                ?>
                 <div class="col-divide-3 col-divide-lg-12">
 
                     <div class="experience__customer-img">
 
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/review-2-1.jpg">
+                        <img src="<?php echo $value['images']['url']?>">
 
                     </div>
 
@@ -555,160 +421,48 @@
 
                     <span>
 
-                        THU HÀ
+                        <?php echo $value['title_1']?>
 
                     </span>
 
-                        <p>Việt Kiều Mỹ</p>
+                        <p><?php echo $value['title_2']?></p>
 
                     </div>
 
                     <div class="experience__customer-content">
-                        <p>Trước khi nhập cảnh qua Mỹ sống với chồng, cô đã tham gia lớp học Phun thêu cấp tốc tại Diva. Dù khá khó khăn để khởi nghiệp nơi đất khách nhưng nhờ cứng tay nghề cô đã được rất nhiều khách hàng ủng hộ.</p>
+                        <p><?php echo $value['Content']?></p>
                     </div>
 
                 </div>
-
-                <div class="col-divide-3 col-divide-lg-12">
-
-                    <div class="experience__customer-img">
-
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/reivew-3.jpg">
-
-                    </div>
-
-                    <div class="name--customer">
-
-                    <span>
-
-                        MY LAN
-
-                    </span>
-
-                        <p>Thủ Dầu Một, Bình Dương</p>
-
-                    </div>
-
-                    <div class="experience__customer-content">
-
-                        <p>My Lan rất vui vì không chỉ được học nghề "HOT" mà còn được làm quen thêm với những người bạn mới, giảng viên Thẩm mỹ tại Diva cũng rất tận tâm chỉ bảo tận tình. Thật tuyệt!</p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-divide-3 col-divide-lg-12">
-
-                    <div class="experience__customer-img">
-
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/review-1-1.jpg">
-
-                    </div>
-
-                    <div class="name--customer">
-
-                    <span>
-
-                        HẠ VY
-
-                    </span>
-
-                        <p>Đồng Khời, Bến Tre</p>
-
-                    </div>
-
-                    <div class="experience__customer-content">
-
-                        <p>Sau khi tham gia khóa học nghề Spa tại Học viện Diva Academy, Hạ Vy đã được giữ lại làm việc tại Diva. Hạ vy rất vui vì môi trường làm việc chuyên nghiệp, thân thiện, thu nhập ổn định.</p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-divide-3 col-divide-lg-12">
-
-                    <div class="experience__customer-img">
-
-                        <img src="http://localhost/diva/wp-content/uploads/2020/08/review-f.jpg">
-
-                    </div>
-
-                    <div class="name--customer">
-
-                    <span>
-
-                        TRẦN PHƯƠNG
-
-                    </span>
-
-                        <p>Kế toán</p>
-
-                    </div>
-
-                    <div class="experience__customer-content">
-
-                        <p>Viện thẩm mỹ Diva là địa chỉ chăm sóc sắc đẹp yêu thích của Phương. Đặc biệt, Phương cảm thấy rất hài lòng với thái độ phục vụ chuyên nghiệp và các phương pháp làm đẹp tiên tiến luôn được cập nhật mới tại đây.</p>
-
-                    </div>
-
-                </div>
-
+                <?php
+                    } }
+                ?>
             </div>
 
             <!-- only Mobile -->
             <div class="only-mobile text--center">
                 <div class="row-divide">
+                    <?php
+                        if(!empty($e['items'])) {
+                        foreach ($e['items'] as $value) {
+                    ?>
                     <div class="col-divide-6">
                         <div class="experience__customer-img">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/review-2-1.jpg">
+                            <img src="<?php echo $value['images']['url']?>">
                         </div>
                         <div class="name--customer">
-                            <span>THU HÀ</span>
-                            <p>Việt Kiều Mỹ</p>
+                            <span><?php echo $value['title_1']?></span>
+                            <p><?php echo $value['title_2']?></p>
                         </div>
                         <div class="experience__customer-content">
 
-                            <p>Trước khi nhập cảnh qua Mỹ sống với chồng,
-                                <span id="dots">...</span><span id="more">cô đã tham gia lớp học Phun thêu cấp tốc tại Diva. Dù khá khó khăn để khởi nghiệp nơi đất khách nhưng nhờ cứng tay nghề cô đã được rất nhiều khách hàng ủng hộ.</span>
-                                <button onclick="myFunction()" id="myBtnReadmore"> Xem thêm</button></p>
-                        </div>
-                    </div>
-                    <div class="col-divide-6">
+                            <p><?php echo $value['Content']?></p>
 
-                        <div class="experience__customer-img">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/reivew-3.jpg">
                         </div>
-                        <div class="name--customer"> <span>MY LAN</span>
-                            <p>Thủ Dầu Một, Bình Dương</p>
-                        </div>
-                        <div class="experience__customer-content">
-                            <p>My Lan rất vui vì không chỉ được học nghề "HOT"
-                                <span id="dots2">...</span><span id="more2">
-		mà còn được làm quen thêm với những người bạn mới, giảng viên Thẩm mỹ tại Diva cũng rất tận tâm chỉ bảo tận tình. Thật tuyệt!</span>
-                                <button onclick="myFunction2()" id="myBtnReadmore2">Xem thêm</button></p>
-                        </div>
-
                     </div>
-
-                    <div class="col-divide-6">
-                        <div class="experience__customer-img">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/review-1-1.jpg"></div><div class="name--customer"> <span> HẠ VY </span><p>Đồng Khời, Bến Tre</p></div>
-                        <div class="experience__customer-content"><p>Sau khi tham gia khóa học nghề Spa tại Học viện Diva
-                                <span id="dots3">...</span><span id="more3">
-					Academy, Hạ Vy đã được giữ lại làm việc tại Diva. Hạ vy rất vui vì môi trường làm việc chuyên nghiệp, thân thiện, thu nhập ổn định.</span>
-                                <button onclick="myFunction3()" id="myBtnReadmore3">Xem thêm</button>
-                            </p></div>
-                    </div>
-                    <div class="col-divide-6">
-                        <div class="experience__customer-img"> <img src="http://localhost/diva/wp-content/uploads/2020/08/review-f.jpg"></div>
-                        <div class="name--customer"> <span> TRẦN PHƯƠNG </span><p>Kế toán</p></div><div class="experience__customer-content">
-                            <p>Viện thẩm mỹ Diva là địa chỉ chăm sóc sắc đẹp yêu thích
-                                <span id="dots4">...</span><span id="more4">
-					của Phương. Đặc biệt, Phương cảm thấy rất hài lòng với thái độ phục vụ chuyên nghiệp và các phương pháp làm đẹp tiên tiến luôn được cập nhật mới tại đây.
-					</span>
-                                <button onclick="myFunction4()" id="myBtnReadmore4">Xem thêm</button>
-                            </p></div>
-                    </div>
+                    <?php
+                        } }
+                    ?>
                 </div>
             </div>
             <!--End onlymobile-->
@@ -717,69 +471,37 @@
     </section>
 
     <section class="why my-20" id="media">
-        <h3 class="why__title text--center text--upcase title--section">DIVA ACADEMY - ĐỊA CHỈ ĐÀO TẠO HÀNG NGÀN<span class="d--block">CHUYÊN VIÊN THẨM MỸ </span></h3>
+        <?php
+            $f = get_field('daotao_row_6', 'option');
+        ?>
+        <h3 class="why__title text--center text--upcase title--section"><?php echo $f['title'];?></h3>
         <div class="why__list">
+            <?php
+                if(!empty($f['items'])) {
+                foreach ($f['items'] as $value) {
+            ?>
             <div>
                 <div>
                     <div class="why__item  m-15" style="width: 100%; display: inline-block;">
                         <div class="why__item-img max--height--240">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/diva-5.jpg" alt="doi-ngu-bac-si">
+                            <img src="<?php echo $value['images']['url']?>" alt="<?php echo $value['images']['title']?>">
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <div class="why__item  m-15" style="width: 100%; display: inline-block;">
-                        <div class="why__item-img max--height--240">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/diva-5.jpg" alt="doi-ngu-bac-si">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div class="why__item  m-15" style="width: 100%; display: inline-block;">
-                        <div class="why__item-img max--height--240">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/diva-5.jpg" alt="doi-ngu-bac-si">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div class="why__item  m-15" style="width: 100%; display: inline-block;">
-                        <div class="why__item-img max--height--240">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/diva-5.jpg" alt="doi-ngu-bac-si">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div class="why__item  m-15" style="width: 100%; display: inline-block;">
-                        <div class="why__item-img max--height--240">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/diva-5.jpg" alt="doi-ngu-bac-si">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div class="why__item  m-15" style="width: 100%; display: inline-block;">
-                        <div class="why__item-img max--height--240">
-                            <img src="http://localhost/diva/wp-content/uploads/2020/08/diva-5.jpg" alt="doi-ngu-bac-si">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                } }
+            ?>
         </div>
     </section>
 
     <section class="signup-class">
+        <?php
+            $g = get_field('daotao_row_7', 'option');
+        ?>
         <div class="recruitment__register" id="formEducation">
             <div class="recruitment__register-imgbackground">
-                <img src="http://localhost/diva/wp-content/uploads/2020/08/background2.jpg" alt="Đào tạo tuyển dụng">
+                <img src="<?php echo $g['images']['url']?>" alt="Đào tạo tuyển dụng">
             </div>
             <div class="recruitment__container recruitment__register-form">
                 <form method="GET" id="form-dk-tuyendung2">
@@ -819,33 +541,38 @@
                             <button id="btn-submit-recruiment" type="submit" name="submitbutton" class="btn--sendform py-10">ĐĂNG KÝ KHÓA HỌC</button>
                         </div>
                         <div class="col-divide-12 col-divide-sm-12 btn__seen center--center">
-                            <p class="text-info-form text--center text--light mt-25">Website: www.vienthammydiva.vn<span class="d--block"></span>Hỗ trợ nhanh: 1900 6689</p>
+                            <p class="text-info-form text--center text--light mt-25">Website: <?php echo $g['link_website']?><span class="d--block"></span>Hỗ trợ nhanh: <?php echo $g['phone']?></p>
                         </div>
                         <p class="d--none infoVal text--yellow">Bạn chưa điền đầy đủ thông tin</p>
                     </div>
                 </form>
 
             </div>
-            <div class="over-lay-top"><h3 class="text--center resource_customer-title">Học viện DIVA ACADEMY<span class="d--block"></span>
-                    Hệ thống chuỗi đào tạo thẩm mỹ lớn nhất VIỆT NAM</h3></div>
+            <div class="over-lay-top"><h3 class="text--center resource_customer-title"><?php echo $g['title']?></h3></div>
         </div>
     </section>
 
     <footer class="footer footer--background" id="brand">
         <section class="footer__phun-may py-30">
+            <?php
+                $h = get_field('daotao_row_8', 'option');
+            ?>
             <div class="container">
                 <div class="shorted">
-                    <h3 class="title--section text--upcase text--center text--light">HỆ THỐNG VIỆN THẨM MỸ DIVA</h3>
+                    <h3 class="title--section text--upcase text--center text--light"><?php echo $h['title']?></h3>
                     <div class="row-divide">
+                        <?php
+                            if(!empty($h['items'])) {
+                            foreach ($h['items'] as $value) {
+                        ?>
                         <div class="col-divide-6 mb--17 col-divide-lg-12 style--borderfooter">
                             <div class="row-divide">
                                 <div class="col-divide-8 col-divide-lg-12">
                                     <div class="footer__valantine-name-branch">
-                                        <h3 class="title--item text--upcase text--bold text--light">TP. HỒ CHÍ MINH - CƠ SỞ 1</h3>
+                                        <h3 class="title--item text--upcase text--bold text--light"><?php echo $value['title']?></h3>
                                     </div>
                                     <div class="footer__valantine-name-dc text--light">
-                                        <p class="text--center--t">Số 9 Lý Thường Kiệt, Thị Trấn Hóc Môn,
-                                            Huyện Hóc Môn, TP. HCM</p>
+                                        <p class="text--center--t"><?php echo $value['location']?></p>
                                     </div>
                                 </div>
                                 <div class="col-divide-4 col-divide-lg-12">
@@ -853,32 +580,14 @@
                                         <!-- <i class="fab fa-facebook-square icon text--light"></i> -->
                                     </div>
                                     <div class="footer__valantine-telephone text--center text--light">
-                                        1900 6689
+                                        <?php echo $value['phone']?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-divide-6 mb--17 col-divide-lg-12 style--borderfooter">
-                            <div class="row-divide">
-                                <div class="col-divide-8 col-divide-lg-12">
-                                    <div class="footer__valantine-name-branch">
-                                        <h3 class="title--item text--upcase text--bold text--light">TP. HỒ CHÍ MINH - CƠ SỞ 2</h3>
-                                    </div>
-                                    <div class="footer__valantine-name-dc text--light">
-                                        <p class="text--center--t">366A4 Phan Văn Trị, P. 5 , Q. Gò Vấp, TP. HCM
-                                            (Kế bên siêu thị E Mart Gò Vấp)</p>
-                                    </div>
-                                </div>
-                                <div class="col-divide-4 col-divide-lg-12">
-                                    <div class="footer__valantine-icon text--center">
-
-                                    </div>
-                                    <div class="footer__valantine-telephone text--center text--light">
-                                        1900 6689
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            } }
+                        ?>
                     </div>
                 </div>
             </div>
