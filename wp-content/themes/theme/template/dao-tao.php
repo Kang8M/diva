@@ -50,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo bloginfo('template_url')?>/assets/css/jquery.fancybox.min.css" />
     <script src="<?php echo bloginfo('template_url')?>/assets/js/jquery.fancybox.min.js"></script>
-    <script src="<?php echo bloginfo('template_url')?>/assets/js/theme.js"></script>
+<!--    <script src="--><?php //echo bloginfo('template_url')?><!--/assets/js/theme.js"></script>-->
 
 
     <?php wp_head();?>
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="banner__mb d--none dt--block positon--relative">
-            <img class="d--block" src="<?php echo $a['images_mobile']['url']?>" alt="banner-diva-phun-may">
+            <img class="d--block" src="<?php echo $a['image_mobile']['url']?>" alt="banner-diva-phun-may">
             <div class="banner__PC_content_right">
                 <!-- form register-->
                 <div class="form__signin form-rigister-banner fix-mobile" id="register-banner-form">
