@@ -98,13 +98,13 @@
                     <div id="menuToggle">
 
                         <ul id="menu">
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#resource">khóa học</a></li>
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#giftcus">ưu đãi</a></li>
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#about-diva">Diva academy</a></li>
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#recruiment">Trải nghiệm</a></li>
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#media">Hình ảnh / Video</a></li>
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#formEducation">đăng ký học</a></li>
-                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="https://vienthammydiva.vn/dao-tao/#brand">Chuỗi chi nhánh</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#resource">khóa học</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#giftcus">ưu đãi</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#about-diva">Diva academy</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#recruiment">Trải nghiệm</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#media">Hình ảnh / Video</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#formEducation">đăng ký học</a></li>
+                            <li class="header__navbar-item d--inline-block p-12"><a class="text--upcase" href="#brand">Chuỗi chi nhánh</a></li>
                         </ul>
 
                     </div>

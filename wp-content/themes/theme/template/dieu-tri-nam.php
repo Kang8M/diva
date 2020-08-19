@@ -83,17 +83,9 @@
     <script type="text/javascript" src="https://vienthammydiva.vn/wp-content/themes/divaspa/landing-page/assets/js/slick.min.js"></script>
     <style></style>
     <title>NGUYÊN NHÂN GÂY RA NÁM</title>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KTGP4SM');
-    </script>
-    <!-- End Google Tag Manager -->
-    <style type="text/css">@keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-moz-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-webkit-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}#dUsVStF-1597072157875{outline:none!important;visibility:visible!important;resize:none!important;box-shadow:none!important;overflow:visible!important;background:none!important;opacity:1!important;filter:alpha(opacity=100)!important;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity1)!important;-moz-opacity:1!important;-khtml-opacity:1!important;top:auto!important;right:10px!important;bottom:0px!important;left:auto!important;position:fixed!important;border:0!important;min-height:0!important;min-width:0!important;max-height:none!important;max-width:none!important;padding:0!important;margin:0!important;-moz-transition-property:none!important;-webkit-transition-property:none!important;-o-transition-property:none!important;transition-property:none!important;transform:none!important;-webkit-transform:none!important;-ms-transform:none!important;width:auto!important;height:auto!important;display:none!important;z-index:2000000000!important;background-color:transparent!important;cursor:auto!important;float:none!important;border-radius:unset!important;pointer-events:auto!important}#Y0hBbsZ-1597072157876.open{animation : tawkMaxOpen .25s ease!important;}</style>
+
 </head>
-<body id="body_vtmdiva" class="page-template page-template-landing-page page-template-landingpage-builder-ver1 page-template-landing-pagelandingpage-builder-ver1-php page page-id-3555">
+<body>
 <div id="" class="">
     <header class="header p-12 mar-0">
         <div class="header__contain container">
@@ -134,15 +126,20 @@
     </div>
 </div>
 <section class="banner">
-    <img class="d--block only-des" src="https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-danh-bay-nam-sang-min-da-op-4-bo-chu-01-2019.png">
-    <img class="d--block only-mobile" src="https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-mobile-danh-bay-nam-sang-min-da-op-4-bo-chu-02-2019.png">
-    <script>jQuery(".banner .header__register-btn").css("background","linear-gradient(200deg,rgba(227, 196, 127, 1) 0%,rgba(147, 109, 48, 1) 100%)");</script>
+    <?php
+        $a = get_field('dieutrinam_row_1', 'option');
+    ?>
+    <img class="d--block only-des" src="<?php echo $a['images_1']['url']?>">
+    <img class="d--block only-mobile" src="<?php echo $a['image_mobile']['url']?>">
 </section>
 <section class="service">
+    <?php
+        $b = get_field('dieutrinam_row_2', 'option');
+    ?>
     <div class="py-30" id="service">
-        <div class="content-background-image" style="background-image: url(&quot;https://vienthammydiva.vn/wp-content/uploads/2020/06/vien-tham-my-diva-flower-1566720704.png&quot;); background-repeat: no-repeat;">
+        <div class="content-background-image" style="background-image: url('<?php echo bloginfo('template_url')?>/assets/images/vien-tham-my-diva-flower-1566720704.png'); background-repeat: no-repeat;">
             <div class="container">
-                <h3 class="discount__title text--center text--upcase" style="color: rgb(202, 169, 102);"> NGUYÊN NHÂN GÂY RA NÁM</h3>
+                <h3 class="discount__title text--center text--upcase" style="color: rgb(202, 169, 102);"> <?php echo $b['title']?></h3>
                 <div class="attention__list row-divide">
                     <p class="text--center mb--17" style="color: rgb(202, 169, 102);"></p>
                 </div>
@@ -150,19 +147,12 @@
                 <div class="attention__list row-divide">
                     <div class="col-divide-12  py-30 text--center">
                         <div class="content-center">
-                            <p style="color: rgb(202, 169, 102);"><img class="aligncenter wp-image-16987 size-large" src="https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-nam-tan-nhang-op3-03-1564977615-1024x512.jpg" alt="" srcset="https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-nam-tan-nhang-op3-03-1564977615-1024x512.jpg 1024w, https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-nam-tan-nhang-op3-03-1564977615-300x150.jpg 300w, https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-nam-tan-nhang-op3-03-1564977615-768x384.jpg 768w, https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-nam-tan-nhang-op3-03-1564977615-1536x768.jpg 1536w, https://vienthammydiva.vn/wp-content/uploads/2020/06/baner-nam-tan-nhang-op3-03-1564977615.jpg 1800w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="512"></p>
+                            <p style="color: rgb(202, 169, 102);"><img class="aligncenter wp-image-16987 size-large" src="<?php echo $b['images']['url']?>" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="512"></p>
                         </div>
                     </div>
                 </div>
                 <!--End-->
             </div>
-            <script>jQuery(".content-background-image h3:first-child").removeClass("text--light");</script><script>jQuery(".content-background-image p:first-child").removeClass("text--light");</script>      <script>
-                /*Setup bg, color,text*/
-                jQuery(".content-background-image p:first-child").css("color","#caa966");
-                jQuery(".content-background-image h3:first-child").css("color","#caa966");
-                jQuery(".content-background-image").css({"background-image":'url("https://vienthammydiva.vn/wp-content/uploads/2020/06/vien-tham-my-diva-flower-1566720704.png")',"background-repeat":"no-repeat"});
-                /*end*/
-            </script>
         </div>
         <div class="container text--center">
         </div>
@@ -170,6 +160,9 @@
 </section>
 <!--sub <section></section>-->
 <section class="truonghop" id="only-none">
+    <?php
+        $c = get_field('dieutrinam_row_3', 'option');
+    ?>
     <div class="py-30">
         <div class="container">
             <h3 class="discount__title title--section text--center text--upcase"> LASER ALPHATECH - CÔNG NGHỆ TRỊ NÁM SỐ 1 HOA KỲ</h3>
